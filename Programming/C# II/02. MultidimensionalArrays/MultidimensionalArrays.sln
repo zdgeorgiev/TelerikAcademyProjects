@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. MatrixByN", "MultidimensionalArrays\01. MatrixByN.csproj", "{8F384DFA-74B3-4505-AAA4-D478C3ADD444}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. MaxSum3x3", "MaxSum3x3\02. MaxSum3x3.csproj", "{450D1F45-6C01-4747-95F6-6DC964E1BB08}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. BestStringSequence", "BestStringSequence\03. BestStringSequence.csproj", "{B64B36E7-F246-4EC3-880A-FA87549C2FF0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "04. BinSearch", "BinSearch\04. BinSearch.csproj", "{44798C18-4515-4FA9-B713-CDFDB1C25937}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8F384DFA-74B3-4505-AAA4-D478C3ADD444}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8F384DFA-74B3-4505-AAA4-D478C3ADD444}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8F384DFA-74B3-4505-AAA4-D478C3ADD444}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8F384DFA-74B3-4505-AAA4-D478C3ADD444}.Release|Any CPU.Build.0 = Release|Any CPU
+		{450D1F45-6C01-4747-95F6-6DC964E1BB08}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{450D1F45-6C01-4747-95F6-6DC964E1BB08}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{450D1F45-6C01-4747-95F6-6DC964E1BB08}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{450D1F45-6C01-4747-95F6-6DC964E1BB08}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B64B36E7-F246-4EC3-880A-FA87549C2FF0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B64B36E7-F246-4EC3-880A-FA87549C2FF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B64B36E7-F246-4EC3-880A-FA87549C2FF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B64B36E7-F246-4EC3-880A-FA87549C2FF0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44798C18-4515-4FA9-B713-CDFDB1C25937}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44798C18-4515-4FA9-B713-CDFDB1C25937}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44798C18-4515-4FA9-B713-CDFDB1C25937}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44798C18-4515-4FA9-B713-CDFDB1C25937}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
