@@ -10,9 +10,13 @@ namespace Constructors
 
         public Battery()
         {
+        }
+        
+        public Battery(int hoursIdle, int hoursTalk)
+        {
             this.batteryModel = null;
-            this.hoursIdle = 0;
-            this.hoursTalk = 0;
+            this.hoursIdle = hoursIdle;
+            this.hoursTalk = hoursTalk;
         }
 
         public string BatteryModel

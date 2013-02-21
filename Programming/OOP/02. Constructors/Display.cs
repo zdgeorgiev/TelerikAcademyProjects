@@ -9,8 +9,6 @@ namespace Constructors
 
         public Display()
         {
-            this.displaySize = 0;
-            this.numbersOfColors = 0M;
         }
 
         public int DisplaySize

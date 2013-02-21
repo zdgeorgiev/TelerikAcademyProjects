@@ -11,11 +11,15 @@ namespace Constructors
         static void Main(string[] args)
         {
             GSM gsm = new GSM("Iphone4S", "Apple");
+            Console.WriteLine(gsm.Model);
             Console.WriteLine(gsm.Manufacturer);
             Console.WriteLine(gsm.Price);
-            Display display = new Display();
-            Console.WriteLine(display.DisplaySize);
-            
+            Console.WriteLine();
+            Battery bat = new Battery(50,6);
+            Console.WriteLine(bat.HoursIdle);
+            Console.WriteLine(bat.HoursTalk);
+            GSM newPhone = new GSM("Nokia", "Apple", "Zdravko", 800M, null, null);
+            Console.WriteLine(newPhone.Battery);
         }
     }
 }

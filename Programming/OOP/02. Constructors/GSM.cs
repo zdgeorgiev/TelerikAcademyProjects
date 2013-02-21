@@ -12,12 +12,18 @@ namespace Constructors
         private string owner;
         private string manufacturer;
 
-        public GSM(string model, string manufacturer)
+        public GSM(string model, string manufacturer) : this(model, manufacturer, null, 0, null, null)
+        {
+        }
+
+        public GSM(string model, string manufacturer, string owner, decimal price, Display display, Battery battery)
         {
             this.model = model;
             this.manufacturer = manufacturer;
-            this.owner = null;
-            this.price = 0.0M;
+            this.owner = owner;
+            this.price = price;
+            this.Display = display;
+            this.Battery = battery;
         }
 
         public string Model
