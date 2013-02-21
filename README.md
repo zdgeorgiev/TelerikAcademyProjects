@@ -1,3 +1,3 @@
 Hello,
 
-Here i'm gonna present you my Telerik Academy projects and homeworks.
+Here i'm gonna presents you my Telerik Academy projects and homeworks.
