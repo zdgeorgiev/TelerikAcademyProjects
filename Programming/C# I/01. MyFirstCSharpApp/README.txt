@@ -15,3 +15,4 @@ Tasks discriptions:
 06.Create a console application that calculates and prints the square of the number 12345.
 
 07.Write a program that prints the first 10 members of the sequence: 2, -3, 4, -5, 6, -7, ...
+
