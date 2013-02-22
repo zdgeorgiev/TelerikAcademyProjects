@@ -2,13 +2,19 @@
 
 class GSM
 {
-    public Display Display = new Display(null, null);
-    public Battery Battery = new Battery(null, null, null);
+    private Display display;
+    private Battery battery;
 
     private string model;
     private decimal? price;
     private string owner;
     private string manufacturer;
+
+    public override string ToString()
+    {
+        return string.Format("Model - {0}, Manufactorer - {1}, Owner - {2} Price - {3}",
+            this.model, this.manufacturer, this.owner, this.price);
+    }
 
     public GSM(string model, string manufacturer)
         : this(model, manufacturer, null, null, null, null)
@@ -31,8 +37,20 @@ class GSM
         this.manufacturer = manufacturer;
         this.owner = owner;
         this.price = price;
-        this.Battery = battery;
-        this.Display = display;
+        this.battery = battery;
+        this.display = display;
+    }
+
+    public Battery Battery
+    {
+        get { return this.battery; }
+        set { this.battery = value; }
+    }
+
+    public Display Display
+    {
+        get { return this.display; }
+        set { this.display = value; }
     }
 
     public string Model

@@ -10,27 +10,40 @@ class Battery
     private string batteryModel;
     private int? hoursIdle;
     private int? hoursTalk;
+    private BatteryType batteryType;
 
     public Battery() 
-        : this(null, null, null)
+        : this(null, null, null, 0)
     {
     }
 
     public Battery(string batteryModel)
-        : this(null, null, batteryModel)
+        : this(null, null, batteryModel, 0)
     {
     }
 
     public Battery(int? hoursIdle, int? hoursTalk)
-        : this(hoursIdle, hoursTalk, null)
+        : this(hoursIdle, hoursTalk, null , 0)
     {
     }
 
     public Battery(int? hoursIdle, int? hoursTalk, string batteryModel)
+        : this(hoursIdle, hoursTalk, batteryModel, 0)
     {
-        this.batteryModel = batteryModel;
+    }
+
+    public Battery(int? hoursIdle, int? hoursTalk, string batteryModel, BatteryType batteryType)
+    {
         this.hoursIdle = hoursIdle;
         this.hoursTalk = hoursTalk;
+        this.batteryModel = batteryModel;
+        this.batteryType = batteryType;
+    }
+
+    public BatteryType BatteryType
+    {
+        get { return this.batteryType; }
+        set { this.batteryType = value; }
     }
 
     public string BatteryModel

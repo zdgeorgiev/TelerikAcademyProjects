@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{4B71F017-E8AF-4EF5-860C-2812C2C0B9C7}</ProjectGuid>
+    <ProjectGuid>{9AABE461-9344-4F17-8C36-AF77D74574CD}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>DefiningClassesPartI</RootNamespace>
-    <AssemblyName>DefiningClassesPartI</AssemblyName>
+    <RootNamespace>MobileClass</RootNamespace>
+    <AssemblyName>MobileClass</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
