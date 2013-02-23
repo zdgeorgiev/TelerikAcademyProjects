@@ -58,19 +58,14 @@ class GSM
         get { return this.model; }
         set
         {
-            if (String.IsNullOrEmpty(value))
+            if ((value.Length > 2 && value.Length <= 50) || value == null)
             {
-                throw new ArgumentException("Model name cannot be empty.");
+                this.model = value;
             }
-            else if (value.Length < 2)
+            else
             {
-                throw new ArgumentException("Model name is too short! It should be at least 2 letters.");
+                throw new ArgumentException("Model length should be from 3 to 50 chars.");
             }
-            else if (value.Length > 50)
-            {
-                throw new ArgumentException("Model name is too long! It should be less than 50 letters.");
-            }
-            this.model = value;
         }
     }
 
@@ -79,11 +74,14 @@ class GSM
         get { return this.price; }
         set
         {
-            if (value < 0 || value == null)
+            if (value > 0)
             {
-                throw new ArgumentException("Prize cannot be smaller than 0.");
+                this.price = value;
             }
-            this.price = value;
+            else
+            {
+                throw new ArgumentException("Price should be higher than 0.");
+            }
         }
     }
 
@@ -92,19 +90,14 @@ class GSM
         get { return this.owner; }
         set
         {
-            if (String.IsNullOrEmpty(value))
+            if ((value.Length > 2 && value.Length <= 50) || value == null)
             {
-                throw new ArgumentException("Owner name cannot be empty.");
+                this.owner = value;
             }
-            else if (value.Length < 2)
+            else
             {
-                throw new ArgumentException("Owner name is too short! It should be at least 2 letters.");
+                throw new ArgumentException("Owner length should be from 3 to 50 chars.");
             }
-            else if (value.Length > 50)
-            {
-                throw new ArgumentException("Owner name is too long! It should be less than 50 letters.");
-            }
-            this.owner = value;
         }
     }
 
@@ -113,19 +106,14 @@ class GSM
         get { return this.manufacturer; }
         set
         {
-            if (String.IsNullOrEmpty(value))
+            if ((value.Length > 2 && value.Length <= 50) || value == null)
             {
-                throw new ArgumentException("Manufacturer name cannot be empty.");
+                this.manufacturer = value;
             }
-            else if (value.Length < 2)
+            else
             {
-                throw new ArgumentException("Manufacturer name is too short! It should be at least 2 letters.");
+                throw new ArgumentException("Manufacturer length should be from 3 to 50 chars.");
             }
-            else if (value.Length > 50)
-            {
-                throw new ArgumentException("Manufacturer name is too long! It should be less than 50 letters.");
-            }
-            this.manufacturer = value;
         }
     }
 }

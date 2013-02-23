@@ -26,15 +26,14 @@ class Display
         get { return this.displaySize; }
         set
         {
-            if (value <= 0 || value == null)
+            if ((value > 0 && value <= 100) || value == null)
             {
-                throw new ArgumentException("Display size cannot be 0 or smaller.");
+                this.displaySize = value;
             }
-            else if (value > 100)
+            else
             {
-                throw new ArgumentException("Display size cannot be higher than 100 inches.");
+                throw new ArgumentException("DisplaySize should be from 1 to 100 inches.");
             }
-            this.displaySize = value;
         }
     }
 
@@ -43,15 +42,14 @@ class Display
         get { return this.numbersOfColors; }
         set
         {
-            if (value <= 0 || value == null)
+            if ((value > 0 && value <= 100000000) || value == null)
             {
-                throw new ArgumentException("NumberOfColors cannot be 0 or smaller.");
+                this.numbersOfColors = value;
             }
-            else if (value > 100000000)
+            else
             {
-                throw new ArgumentException("NumberOfColors cannot higher than 100,000,000.");
+                throw new ArgumentException("DisplaySize should be from 1 to 100,000,000 inches.");
             }
-            this.numbersOfColors = value;
         }
     }
 }
