@@ -49,18 +49,47 @@ class Battery
     public string BatteryModel
     {
         get { return this.batteryModel; }
-        set { this.batteryModel = value; }
+        set
+        {
+            if (String.IsNullOrEmpty(value))
+            {
+                throw new ArgumentException("BatteryModel cannot be empty.");
+            }
+            else if (value.Length < 2)
+            {
+                throw new ArgumentException("BatteryModel is too short! It should be at least 2 letters.");
+            }
+            else if (value.Length > 50)
+            {
+                throw new ArgumentException("BatteryModel is too long! It should be less than 50 letters.");
+            }
+            this.batteryModel = value; 
+        }
     }
 
     public int? HoursIdle
     {
         get { return this.hoursIdle; }
-        set { this.hoursIdle = value; }
+        set
+        {
+            if (value < 0 || value == null)
+            {
+                throw new ArgumentException("HoursIdle cannot be smaller than 0.");
+            }
+            this.hoursIdle = value; 
+        }
     }
 
     public int? HoursTalk
     {
         get { return this.hoursTalk; }
-        set { this.hoursTalk = value; }
+        set 
+        {
+            if (value < 0 || value == null)
+            {
+                throw new ArgumentException("HoursTalk cannot be smaller than 0.");
+            }
+            this.hoursTalk = value; 
+        }
     }
 }

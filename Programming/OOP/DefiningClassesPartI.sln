@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MobileClass", "MobileClass\MobileClass.csproj", "{9AABE461-9344-4F17-8C36-AF77D74574CD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. MobileClass", "MobileClass\01. MobileClass.csproj", "{9AABE461-9344-4F17-8C36-AF77D74574CD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
