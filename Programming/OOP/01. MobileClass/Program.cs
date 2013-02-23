@@ -17,7 +17,7 @@ class Program
             Console.WriteLine("Phone price - {0}", gsm.Price);
             Console.WriteLine();
 
-            gsm.Battery = new Battery();
+            gsm.Battery = new Battery(null, null);
             gsm.Battery.BatteryModel = "Durasel";
             Console.WriteLine("Battery Model - {0}", gsm.Battery.BatteryModel);
             gsm.Battery.HoursIdle = 1337;
@@ -38,7 +38,7 @@ class Program
             Console.WriteLine(gsm1.Battery.BatteryType);
 
             GSM gsm2 = new GSM("Nokia", "Nokia", "Chuck Norris");
-            gsm2.Battery = new Battery(20, 40, "Durasel"); // by default batteryType is first in the enum
+            gsm2.Battery = new Battery(-1, 40, "Durasel"); // by default batteryType is first in the enum
             //gsm2.Battery.HoursIdle = -1; // Calls exceptions
             Console.WriteLine(gsm2.Battery.BatteryType);
             Console.WriteLine();

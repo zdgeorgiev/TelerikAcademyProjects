@@ -33,12 +33,12 @@ class GSM
 
     public GSM(string model, string manufacturer, string owner, decimal? price, Display display, Battery battery)
     {
-        this.model = model;
-        this.manufacturer = manufacturer;
+        this.Model = model;
+        this.Manufacturer = manufacturer;
         this.owner = owner;
-        this.price = price;
-        this.battery = battery;
-        this.display = display;
+        this.Price = price;
+        this.Battery = battery;
+        this.Display = display;
     }
 
     public Battery Battery

@@ -34,10 +34,10 @@ class Battery
 
     public Battery(int? hoursIdle, int? hoursTalk, string batteryModel, BatteryType batteryType)
     {
-        this.hoursIdle = hoursIdle;
-        this.hoursTalk = hoursTalk;
-        this.batteryModel = batteryModel;
-        this.batteryType = batteryType;
+        this.HoursIdle = hoursIdle;
+        this.HoursTalk = hoursTalk;
+        this.BatteryModel = batteryModel;
+        this.BatteryType = batteryType;
     }
 
     public BatteryType BatteryType
@@ -51,19 +51,14 @@ class Battery
         get { return this.batteryModel; }
         set
         {
-            if (String.IsNullOrEmpty(value))
+            if ((value.Length > 2 && value.Length <= 50) || value == null)
             {
-                throw new ArgumentException("BatteryModel cannot be empty.");
+                this.batteryModel = value;
             }
-            else if (value.Length < 2)
+            else
             {
-                throw new ArgumentException("BatteryModel is too short! It should be at least 2 letters.");
+                throw new ArgumentException("BatteryModel name should be from 3 to 50 characters.");
             }
-            else if (value.Length > 50)
-            {
-                throw new ArgumentException("BatteryModel is too long! It should be less than 50 letters.");
-            }
-            this.batteryModel = value; 
         }
     }
 
@@ -72,11 +67,14 @@ class Battery
         get { return this.hoursIdle; }
         set
         {
-            if (value < 0 || value == null)
+            if (value >= 0 || value == null)
             {
-                throw new ArgumentException("HoursIdle cannot be smaller than 0.");
+                this.hoursIdle = value;
             }
-            this.hoursIdle = value; 
+            else
+            {
+                throw new ArgumentException("HoursTalk annot be smallar than 0");
+            }
         }
     }
 
@@ -85,11 +83,14 @@ class Battery
         get { return this.hoursTalk; }
         set 
         {
-            if (value < 0 || value == null)
+            if (value >= 0 || value == null)
             {
-                throw new ArgumentException("HoursTalk cannot be smaller than 0.");
+                this.hoursTalk = value; 
             }
-            this.hoursTalk = value; 
+            else
+            {
+                throw new ArgumentException("HoursTalk cannot be smallar than 0");
+            }
         }
     }
 }

@@ -3,7 +3,7 @@
 class Display
 {
     private int? displaySize;
-    private decimal? numbersOfColors;
+    private decimal? numberOfColors;
 
     public Display()
         : this(null, null)
@@ -15,10 +15,10 @@ class Display
     {
     }
 
-    public Display(int? displaySize, decimal? numbersOfColors)
+    public Display(int? displaySize, decimal? numberOfColors)
     {
-        this.displaySize = displaySize;
-        this.numbersOfColors = numbersOfColors;
+        this.DisplaySize = displaySize;
+        this.NumberOfColors = numberOfColors;
     }
 
     public int? DisplaySize
@@ -39,12 +39,12 @@ class Display
 
     public decimal? NumberOfColors
     {
-        get { return this.numbersOfColors; }
+        get { return this.numberOfColors; }
         set
         {
             if ((value > 0 && value <= 100000000) || value == null)
             {
-                this.numbersOfColors = value;
+                this.numberOfColors = value;
             }
             else
             {
