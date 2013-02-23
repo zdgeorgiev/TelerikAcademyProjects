@@ -51,13 +51,13 @@ class Battery
         get { return this.batteryModel; }
         set
         {
-            if ((value.Length > 2 && value.Length <= 50) || value == null)
+            if (value.Length > 2 || value == null)
             {
                 this.batteryModel = value;
             }
             else
             {
-                throw new ArgumentException("BatteryModel name should be from 3 to 50 characters.");
+                throw new ArgumentException("BatteryModel name should be atleast 3 chars.");
             }
         }
     }

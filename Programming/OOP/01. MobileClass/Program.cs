@@ -6,6 +6,8 @@ class Program
     {
         try
         {
+
+
             GSM gsm = new GSM(null, null);
             gsm.Manufacturer = "Samsung Electronics";
             Console.WriteLine("Phone manufacturer - {0}", gsm.Manufacturer);

@@ -55,16 +55,17 @@ class GSM
 
     public string Model
     {
+        
         get { return this.model; }
         set
         {
-            if ((value.Length > 2 && value.Length <= 50) || value == null)
+            if (value.Length > 2 || value == null)
             {
                 this.model = value;
             }
             else
             {
-                throw new ArgumentException("Model length should be from 3 to 50 chars.");
+                throw new ArgumentException("Model length should be atleast 3 chars.");
             }
         }
     }
@@ -74,7 +75,7 @@ class GSM
         get { return this.price; }
         set
         {
-            if (value > 0)
+            if (value > 0 || value == null)
             {
                 this.price = value;
             }
@@ -90,13 +91,13 @@ class GSM
         get { return this.owner; }
         set
         {
-            if ((value.Length > 2 && value.Length <= 50) || value == null)
+            if (value.Length > 2  || value == null)
             {
                 this.owner = value;
             }
             else
             {
-                throw new ArgumentException("Owner length should be from 3 to 50 chars.");
+                throw new ArgumentException("Owner length should be atleast 3 chars.");
             }
         }
     }
@@ -106,13 +107,13 @@ class GSM
         get { return this.manufacturer; }
         set
         {
-            if ((value.Length > 2 && value.Length <= 50) || value == null)
+            if (value.Length > 2 || value == null)
             {
                 this.manufacturer = value;
             }
             else
             {
-                throw new ArgumentException("Manufacturer length should be from 3 to 50 chars.");
+                throw new ArgumentException("Manufacturer length should be atleast 3 chars.");
             }
         }
     }
