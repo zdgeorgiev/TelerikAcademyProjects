@@ -26,13 +26,13 @@ class Display
         get { return this.displaySize; }
         set
         {
-            if (value > 0 || value == null)
+            if (value == null || value > 0)
             {
                 this.displaySize = value;
             }
             else
             {
-                throw new ArgumentException("DisplaySize should be atleast 1 inch.");
+                throw new ArgumentException();
             }
         }
     }
@@ -42,7 +42,7 @@ class Display
         get { return this.numberOfColors; }
         set
         {
-            if (value > 0 || value == null)
+            if (value == null || value > 0)
             {
                 this.numberOfColors = value;
             }

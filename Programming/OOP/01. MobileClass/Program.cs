@@ -6,8 +6,6 @@ class Program
     {
         try
         {
-
-
             GSM gsm = new GSM(null, null);
             gsm.Manufacturer = "Samsung Electronics";
             Console.WriteLine("Phone manufacturer - {0}", gsm.Manufacturer);
@@ -40,8 +38,7 @@ class Program
             Console.WriteLine(gsm1.Battery.BatteryType);
 
             GSM gsm2 = new GSM("Nokia", "Nokia", "Chuck Norris");
-            gsm2.Battery = new Battery(-1, 40, "Durasel"); // by default batteryType is first in the enum
-            //gsm2.Battery.HoursIdle = -1; // Calls exceptions
+            gsm2.Battery = new Battery(2, 40, "Durasel"); // by default batteryType is first in the enum
             Console.WriteLine(gsm2.Battery.BatteryType);
             Console.WriteLine();
             Console.WriteLine(gsm2);
@@ -50,6 +47,5 @@ class Program
         {
             Console.WriteLine(ex);
         }
-
     }
 }

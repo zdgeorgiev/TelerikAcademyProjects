@@ -59,7 +59,7 @@ class GSM
         get { return this.model; }
         set
         {
-            if (value.Length > 2 || value == null)
+            if (value == null || value.Length > 2)
             {
                 this.model = value;
             }
@@ -75,7 +75,7 @@ class GSM
         get { return this.price; }
         set
         {
-            if (value > 0 || value == null)
+            if (value == null || value > 0)
             {
                 this.price = value;
             }
@@ -91,7 +91,7 @@ class GSM
         get { return this.owner; }
         set
         {
-            if (value.Length > 2  || value == null)
+            if (value == null  || value.Length > 2)
             {
                 this.owner = value;
             }
@@ -107,7 +107,7 @@ class GSM
         get { return this.manufacturer; }
         set
         {
-            if (value.Length > 2 || value == null)
+            if (value == null || value.Length > 2)
             {
                 this.manufacturer = value;
             }

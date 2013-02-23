@@ -51,7 +51,7 @@ class Battery
         get { return this.batteryModel; }
         set
         {
-            if (value.Length > 2 || value == null)
+            if (value == null || value.Length > 2)
             {
                 this.batteryModel = value;
             }
@@ -67,7 +67,7 @@ class Battery
         get { return this.hoursIdle; }
         set
         {
-            if (value >= 0 || value == null)
+            if (value == null || value >= 0)
             {
                 this.hoursIdle = value;
             }
@@ -83,7 +83,7 @@ class Battery
         get { return this.hoursTalk; }
         set 
         {
-            if (value >= 0 || value == null)
+            if (value == null || value >= 0)
             {
                 this.hoursTalk = value; 
             }
