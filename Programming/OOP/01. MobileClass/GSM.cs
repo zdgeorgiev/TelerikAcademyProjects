@@ -10,12 +10,17 @@ class GSM
     private string owner;
     private string manufacturer;
 
+    //Static field
+    public static GSM iPhone4S = new GSM("iPhone4S", "China", "Pesho", 100);
+
+    //Methods
     public override string ToString()
     {
         return string.Format("Model - {0}, Manufactorer - {1}, Owner - {2} Price - {3}",
             this.model, this.manufacturer, this.owner, this.price);
     }
 
+    //Constructors
     public GSM(string model, string manufacturer)
         : this(model, manufacturer, null, null, null, null)
     {
@@ -39,6 +44,12 @@ class GSM
         this.Price = price;
         this.Battery = battery;
         this.Display = display;
+    }
+
+    //Properties
+    public GSM IPhone4S
+    {
+        get { return this.IPhone4S; }
     }
 
     public Battery Battery
