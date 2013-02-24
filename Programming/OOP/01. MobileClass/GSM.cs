@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 class GSM
 {
@@ -10,6 +11,8 @@ class GSM
     private string owner;
     private string manufacturer;
 
+    private List<Call> callHistory = new List<Call>();
+
     //Static field
     public static GSM iPhone4S = new GSM("iPhone4S", "China", "Pesho", 100);
 
@@ -18,6 +21,42 @@ class GSM
     {
         return string.Format("Model - {0}, Manufactorer - {1}, Owner - {2} Price - {3}",
             this.model, this.manufacturer, this.owner, this.price);
+    }
+
+    public void AddCall(DateTime dateAndTime, decimal dialedPhoneNumber, int duration)
+    {
+        Call call = new Call(dateAndTime, dialedPhoneNumber, duration);
+        callHistory.Add(call);
+    }
+
+    public void RemoveCall(int number)
+    {
+        for (int i = 0; i < CallHistory.Count; i++)
+        {
+            if (CallHistory[i].DialedPhoneNumber == number)
+            {
+                CallHistory.RemoveAt(i);
+                i--;
+            }
+        }
+    }
+
+    public void ClearHistory()
+    {
+        CallHistory.Clear();
+    }
+
+    public double TotalPriceOfCalls(double perMinute)
+    {
+        double timeTalked = 0;
+
+        for (int i = 0; i < callHistory.Count; i++)
+        {
+            timeTalked += CallHistory[i].Duration;
+        }
+        double totalPrice = (timeTalked / 60) * perMinute;
+
+        return totalPrice;
     }
 
     //Constructors
@@ -47,6 +86,11 @@ class GSM
     }
 
     //Properties
+    public List<Call> CallHistory
+    {
+        get { return this.callHistory;}
+    }
+
     public GSM IPhone4S
     {
         get { return this.IPhone4S; }
