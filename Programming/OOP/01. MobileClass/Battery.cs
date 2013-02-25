@@ -1,5 +1,6 @@
 ﻿using System;
 
+//Enums
 public enum BatteryType
 {
     LiIon, NiMH, NiCd
@@ -12,6 +13,7 @@ class Battery
     private int? hoursTalk;
     private BatteryType batteryType;
 
+    //Constructors
     public Battery() 
         : this(null, null, null, 0)
     {
@@ -40,6 +42,7 @@ class Battery
         this.BatteryType = batteryType;
     }
 
+    //Properties
     public BatteryType BatteryType
     {
         get { return this.batteryType; }
