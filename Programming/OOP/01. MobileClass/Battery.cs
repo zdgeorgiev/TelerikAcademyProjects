@@ -1,11 +1,5 @@
 ﻿using System;
 
-//Enums
-public enum BatteryType
-{
-    LiIon, NiMH, NiCd
-}
-
 class Battery
 {
     private string batteryModel;
