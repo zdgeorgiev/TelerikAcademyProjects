@@ -10,9 +10,14 @@ class Student
     private string university;
     private string email;
     private decimal? phoneNumber;
-    private int AllStudents;
+    private int allStudents;
 
     //methods
+    public string AllStudents()
+    {
+        return string.Format("AllStudents - {0}", this.allStudents);
+    }
+
     public override string ToString()
     {
         return string.Format("FullName - {0} {1} {2}, Curs - {3}, University - {4}, Email - {5}, PhoneNumber - {6}, Specialty - {7}.",
@@ -45,10 +50,15 @@ class Student
         this.Email = email;
         this.PhoneNumber = phoneNumber;
         this.Specialty = specialty;
-        AllStudents++;
+        allStudents++;
     }
 
-    //properties
+    ////properties
+    //public int AllStudents
+    //{
+    //    get { return this.allStudents; }
+    //}
+
     public Specialty Specialty
     {
         get { return this.specialty; }

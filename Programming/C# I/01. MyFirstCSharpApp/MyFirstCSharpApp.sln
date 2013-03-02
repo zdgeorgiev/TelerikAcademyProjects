@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "7. SquareRoot", "SquareRoot
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "8. NumberSequence", "NumberSequence\8. NumberSequence.csproj", "{8186A9ED-EB2E-41C4-9B22-8F8CF1868416}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "aaaa", "aaaa\aaaa.csproj", "{EAF90800-0ACD-42B9-8690-57733525D028}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -61,6 +63,10 @@ Global
 		{8186A9ED-EB2E-41C4-9B22-8F8CF1868416}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8186A9ED-EB2E-41C4-9B22-8F8CF1868416}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8186A9ED-EB2E-41C4-9B22-8F8CF1868416}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EAF90800-0ACD-42B9-8690-57733525D028}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EAF90800-0ACD-42B9-8690-57733525D028}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EAF90800-0ACD-42B9-8690-57733525D028}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EAF90800-0ACD-42B9-8690-57733525D028}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
