@@ -22,9 +22,8 @@
   - Display the information about the calls.
   - Assuming that the price per minute is 0.37 calculate and print the total price of the calls in the history.
   - Remove the longest call from the history and calculate the total price again.
-   Finally clear the call history and print it.
-  - 
- ## BONUS:
+  - Finally clear the call history and print it.
+  
 1.      Дефинирайте клас Student, който съдържа следната информация за студентите: трите имена, курс, специалност, университет, електронна поща и телефонен номер.
 2.      Декларирайте няколко конструктора за класа Student, които имат различни списъци с параметри (за цялостната информация за даден студент или част от нея). Данните, за които няма входна информация да се инициализират съответно с null или 0.
 3.      Добавете статично поле в класа Student, в което се съхранява броя на създадените обекти от този клас.
