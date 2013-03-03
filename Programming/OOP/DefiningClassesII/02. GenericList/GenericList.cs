@@ -94,15 +94,35 @@ public class GenericList<T>
         }
     }
 
-    public void InsertAtIndex(int idex, T item)
+    public void InsertAtIndex(int index, T item)
     {
-        //Add item by idex
+        if (index < 0)
+        {
+            throw new IndexOutOfRangeException("Invalid index");
+        }
+        else if (index < list.Length)
+        {
+            list[index] = item;
+        }
+
+        while (index >= list.Length)
+        {
+            T[] newList = new T[list.Length * 2];
+
+            for (int i = 0; i < list.Length; i++)
+            {
+                newList[i] = list[i];
+            }
+            list = newList;
+        }
+        list[index] = item;
     }
 
     public void Clear()
     {
         this.list = new T[list.Length];
     }
+
     public override string ToString()
     {
         StringBuilder sb = new StringBuilder();
@@ -115,8 +135,3 @@ public class GenericList<T>
         return sb.ToString().Trim();
     }
 }
-//Write a generic class GenericList<T> that keeps a list of elements of some parametric type T. 
-//    Keep the elements of the list in an array with fixed capacity which is given as parameter in the class constructor. 
-//        Implement methods for adding element, accessing element by index, removing element by index,
-//            inserting element at given position, clearing the list, finding element by its value and ToString().
-//        Check all input parameters to avoid accessing elements at invalid positions.

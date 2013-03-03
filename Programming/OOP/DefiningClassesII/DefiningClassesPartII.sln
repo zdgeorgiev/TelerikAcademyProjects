@@ -5,6 +5,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "01. 3DPoint", "DefiningClas
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02. GenericListImp", "GenericList\02. GenericListImp.csproj", "{33463C55-08F9-4AC9-930F-F5DCC8CE4EEA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "03. Matrix", "Matrix\03. Matrix.csproj", "{8484A605-DF05-405A-89A5-7E4F4AECCED2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,6 +21,10 @@ Global
 		{33463C55-08F9-4AC9-930F-F5DCC8CE4EEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{33463C55-08F9-4AC9-930F-F5DCC8CE4EEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{33463C55-08F9-4AC9-930F-F5DCC8CE4EEA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8484A605-DF05-405A-89A5-7E4F4AECCED2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8484A605-DF05-405A-89A5-7E4F4AECCED2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8484A605-DF05-405A-89A5-7E4F4AECCED2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8484A605-DF05-405A-89A5-7E4F4AECCED2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -21,6 +21,8 @@ class Program
         Console.WriteLine(genList);
         genList.RemoveByIndex(3);
         Console.WriteLine(genList);
+        genList.InsertAtIndex(18, 6);
+        Console.WriteLine(genList);
 
         GenericList<string> genList1 = new GenericList<string>();
         genList1.Add("Gosho");
@@ -35,6 +37,8 @@ class Program
         genList1.Add("stefan");
         genList1.RemoveByIndex(2);
         genList1.RemoveByIndex(6);
+        Console.WriteLine(genList1);
+        genList1.InsertAtIndex(11, "Petar");
         Console.WriteLine(genList1);
     }
 }
