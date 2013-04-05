@@ -48,6 +48,7 @@
     <Compile Include="ItemLibrary.cs" />
     <Compile Include="ReleasedItem.cs" />
     <Compile Include="ItemRarity.cs" />
+    <Compile Include="TreasureOfShaperDivine.cs" />
     <Compile Include="UserAccount.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

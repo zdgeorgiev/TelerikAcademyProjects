@@ -1,14 +1,13 @@
 ﻿using System;
 
+/// <summary>
+/// Create item with ItemName and ItemRarity
+/// </summary
+
 public class Item
 {
-    /// <summary>
-    /// Create item with ItemName and ItemRarity
-    /// </summary
-
-
-    public ReleasedItem ItemName { get; private set; }
-    public ItemRarity ItemRarity { get; private set; }
+    public ReleasedItem ItemName { get; protected set; }
+    public ItemRarity ItemRarity { get; protected set; }
 
     //Rarity will be common as default
     public Item(ReleasedItem itemName)

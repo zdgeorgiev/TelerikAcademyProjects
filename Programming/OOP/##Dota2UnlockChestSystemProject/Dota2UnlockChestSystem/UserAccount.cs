@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.Text;
 using System.Linq;
 
-class UserAccount
+public class UserAccount
 {
+    private const int LUCKY_NUMBER = 66;
     public string AccountName { get; private set; }
     public string Name { get; private set; }
     public readonly List<Item> AllItems;
+    Random randomNumberForItem = new Random();
 
     //create userAccount
     public UserAccount()
@@ -35,15 +37,17 @@ class UserAccount
     }
 
     //OpenChest
-    public void OpenChest(Chest chest)
+    public void OpenChest(Item item)
     {
+        Chest chest = item as Chest;
+
         bool requiredKey = false;
         bool requiredChest = false;
 
         //Search for the key
-        foreach (var item in AllItems)
+        foreach (var item1 in AllItems)
         {
-            if (item.ItemName == chest.RequiredKey)
+            if (item1.ItemName == chest.RequiredKey)
             {
                 requiredKey = true;
                 break;
@@ -52,7 +56,7 @@ class UserAccount
         //Search for the chest
         foreach (var item2 in AllItems)
         {
-            if (item2.ItemName == chest.Name)
+            if (item2.ItemName == chest.ItemName)
             {
                 requiredChest = true;
             }
@@ -71,11 +75,9 @@ class UserAccount
 
     private void RecieveThePriceFromTheChest(Chest chest)
     {
-        Random random = new Random();
-
         //Simulate the original 5 seconds opening with ticking
         Console.ForegroundColor = ConsoleColor.Green;
-        Console.WriteLine("Opening chest  - " + chest.Name + " :");
+        Console.WriteLine("Opening chest  - " + chest.ItemName + " :");
         Console.ForegroundColor = ConsoleColor.White;
         Console.WriteLine();
 
@@ -86,28 +88,42 @@ class UserAccount
             {
                 Console.WriteLine(i);
                 System.Threading.Thread.Sleep(1000);
-                Console.Beep(1200, 150);
+                Console.Beep(1200, 100);
             }
         }
         Console.WriteLine();
         Console.Beep(1500, 150);
 
-        var yourItem = random.Next(0, chest.allAvaibleItems.Count);
-
-        for (int i = 0; i < chest.allAvaibleItems.Count; i++)
+        //If you are lucky for that 1% chance for unusual
+        if (randomNumberForItem.Next(0, 101) == LUCKY_NUMBER)
         {
-            if (yourItem == i)
+            this.AddItem(new Item(ReleasedItem.Golden_Baby_Roshan, ItemRarity.Immortal));
+            AllItems.Remove(AllItems.Find(item => item.ItemName == chest.ItemName));
+            AllItems.Remove(AllItems.Find(item => item.ItemName == chest.RequiredKey));
+            Console.ForegroundColor = ConsoleColor.DarkYellow;
+            Console.WriteLine("Congratulation You Recieve - Golden Baby Roshan!");
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine();
+        }
+        else
+        {
+            var yourItem = randomNumberForItem.Next(0, chest.allAvaibleItems.Count);
+
+            for (int i = 0; i < chest.allAvaibleItems.Count; i++)
             {
-                Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine("Coungratulation You Recieve - " + chest.allAvaibleItems[i].ItemName + "!");
-                Console.ForegroundColor = ConsoleColor.White;
-                Console.WriteLine();
-                //Add recieved item to inventory
-                this.AddItem(chest.allAvaibleItems[i]);
-                //Remove the key and the chest from inventory
-                AllItems.Remove(AllItems.Find(item => item.ItemName == chest.Name));
-                AllItems.Remove(AllItems.Find(item => item.ItemName == chest.RequiredKey));
-                break;
+                if (yourItem == i)
+                {
+                    //Add recieved item to inventory
+                    this.AddItem(chest.allAvaibleItems[i]);
+                    //Remove the key and the chest from inventory
+                    AllItems.Remove(AllItems.Find(item => item.ItemName == chest.ItemName));
+                    AllItems.Remove(AllItems.Find(item => item.ItemName == chest.RequiredKey));
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("Coungratulation You Recieve - " + chest.allAvaibleItems[i].ItemName + "!");
+                    Console.ForegroundColor = ConsoleColor.White;
+                    Console.WriteLine();
+                    break;
+                }
             }
         }
     }
@@ -116,11 +132,12 @@ class UserAccount
     {
         StringBuilder result = new StringBuilder();
 
+        result.AppendLine();
         result.AppendLine("Account - " + this.AccountName + ", PersonalName - " + this.Name);
         result.AppendLine();
         //Show items from inventory in human readable format
         result.AppendLine("---------------INVENTORY---------------");
-        var sortedInv = AllItems.OrderBy(item => item.ToString());
+        var sortedInv = AllItems.OrderBy(item => item.ItemName);
 
         if (AllItems.Count > 0)
         {
@@ -131,11 +148,10 @@ class UserAccount
         }
         else
         {
-            result.AppendLine("There's no items in this inventory!");
+            result.AppendLine("There's no items in your inventory!");
         }
 
         result.AppendLine("---------------------------------------");
-        result.AppendLine();
 
         return result.ToString();
     }

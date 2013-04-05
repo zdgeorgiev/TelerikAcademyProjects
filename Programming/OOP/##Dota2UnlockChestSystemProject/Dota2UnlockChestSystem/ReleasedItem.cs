@@ -6,8 +6,6 @@
 
 public enum ReleasedItem
 {
-    Featherfall_Quiver,
-    Ring_of_the_Storm,
     DragonClaw_Hook,
     //---------------
     Spottin_Goggles,
@@ -34,11 +32,24 @@ public enum ReleasedItem
     NaVi_Weaselcrow,
     Cluckles_the_Brave,
     //--------------
+    Treasure_of_the_Shaper_Divine,
+    Treasure_of_the_Cursed_Wood,
     Treasure_Key_of_the_Shaper_Divine,
     Treasure_Key_of_the_Cursed_Wood,
     Treasure_Key,
-    Treasure_of_the_Cursed_Wood,
     //--------------
-    Treasure_of_the_Shaper_Divine
-    //or an Exceedingly Rare Special_Item
+    Golden_Baby_Roshan,
+    //--------------
+    Crystalline_Sickles,
+    Ring_of_the_Storm,
+    Cercus_of_Whirling_Death,
+    Encore,
+    Whirling_Mind_Slicer,
+    Ring_Spear_of_Soul_Diffusion,
+    Molten_Fracture,
+    Ancient_Crasher,
+    Ancient_Crescent,
+    The_Horned_Mother,
+    Feral_the_Werebat,
+    Wings_of_the_Ruby_Web
 }

@@ -13,20 +13,14 @@ class Program
     {
         UserAccount myAccount = new UserAccount();
         
-        //myAccount.AddItem(new Item(ReleasedItem.Treasure_Key_of_the_Cursed_Wood));
-        //myAccount.AddItem(new Item(ReleasedItem.Treasure_of_the_Cursed_Wood));
-        //myAccount.AddItem(new Item(ReleasedItem.Treasure_Key_of_the_Cursed_Wood));
-        //myAccount.AddItem(new Item(ReleasedItem.Treasure_of_the_Cursed_Wood));
-        //
-        //myAccount.OpenChest(new TreasureOfCursedWood());
-        //
-        //Console.WriteLine(myAccount);
+        myAccount.AddItem(new Item(ReleasedItem.Treasure_Key_of_the_Cursed_Wood));
+        myAccount.AddItem(new Item(ReleasedItem.Treasure_of_the_Cursed_Wood));
 
         Engine e = new Engine();
 
         string input = Console.ReadLine();
 
-        while (input != null)
+        while (input != "exit")
         {
             e.ExecuteCommand(input, myAccount);
             input = Console.ReadLine();

@@ -1,11 +1,11 @@
 ﻿using System;
 
+/// <summary>
+/// All possible item rarity's
+/// </summary>
+
 public enum ItemRarity
 {
-    /// <summary>
-    /// All possible item rarity's
-    /// </summary>
-
     Common,
     Uncommon,
     Rare,
