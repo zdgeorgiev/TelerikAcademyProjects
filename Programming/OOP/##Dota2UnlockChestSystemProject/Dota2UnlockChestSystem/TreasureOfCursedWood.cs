@@ -4,7 +4,7 @@ using System.Collections.Generic;
 public class TreasureOfCursedWood : Chest
 {   
     public TreasureOfCursedWood()
-        : base(ReleasedItem.Treasure_of_the_Cursed_Wood, ItemRarity.Rare, ReleasedItem.Treasure_Key_of_the_Cursed_Wood)
+        : base(ReleasedItem.Treasure_of_the_Cursed_Wood, ItemRarity.Common, ReleasedItem.Treasure_Key_of_the_Cursed_Wood)
     {
         this.allAvaibleItems = new List<Item>()
         {

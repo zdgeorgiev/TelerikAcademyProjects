@@ -4,7 +4,7 @@ using System.Collections.Generic;
 public class TreasureOfShaperDivine : Chest
 {
     public TreasureOfShaperDivine()
-        : base(ReleasedItem.Treasure_of_the_Shaper_Divine, ItemRarity.Rare, ReleasedItem.Treasure_Key_of_the_Shaper_Divine)
+        : base(ReleasedItem.Treasure_of_the_Shaper_Divine, ItemRarity.Common, ReleasedItem.Treasure_Key_of_the_Shaper_Divine)
     {
         this.allAvaibleItems = new List<Item>()
         {
