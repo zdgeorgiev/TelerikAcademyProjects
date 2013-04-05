@@ -59,6 +59,7 @@ public class UserAccount
             if (item2.ItemName == chest.ItemName)
             {
                 requiredChest = true;
+                break;
             }
         }
 
