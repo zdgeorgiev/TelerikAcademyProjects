@@ -81,7 +81,7 @@ public class UserAccount
         Console.WriteLine("Opening chest  - " + chest.ItemName + " :");
         Console.ForegroundColor = ConsoleColor.White;
         Console.WriteLine();
-
+        
         Console.Beep(1200, 150);
         for (int i = 5; i > 0; i--)
         {
@@ -95,7 +95,7 @@ public class UserAccount
         Console.WriteLine();
         Console.Beep(1500, 150);
 
-        //If you are lucky for that 1% chance for unusual
+        //You have 1% chance to receive unusual
         if (randomNumberForItem.Next(0, 101) == LUCKY_NUMBER)
         {
             this.AddItem(new Item(ReleasedItem.Golden_Baby_Roshan, ItemRarity.Immortal));
@@ -106,9 +106,29 @@ public class UserAccount
             Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine();
         }
+        //You have 3% chance to receive courier
+        else if(randomNumberForItem.Next(0, 101) > 97)
+        {
+            var yourItem = randomNumberForItem.Next(0, chest.allAvaibleCouriers.Count + 1);
+
+            for (int i = 0; i < chest.allAvaibleCouriers.Count; i++)
+            {
+                if (yourItem == i)
+                {
+                    this.AddItem(chest.allAvaibleCouriers[i]);
+                    AllItems.Remove(AllItems.Find(item => item.ItemName == chest.ItemName));
+                    AllItems.Remove(AllItems.Find(item => item.ItemName == chest.RequiredKey));
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("Coungratulation You Recieve - " + chest.allAvaibleCouriers[i].ItemName + "!");
+                    Console.ForegroundColor = ConsoleColor.White;
+                    Console.WriteLine();
+                    break;
+                }
+            }
+        }
         else
         {
-            var yourItem = randomNumberForItem.Next(0, chest.allAvaibleItems.Count);
+            var yourItem = randomNumberForItem.Next(0, chest.allAvaibleItems.Count + 1);
 
             for (int i = 0; i < chest.allAvaibleItems.Count; i++)
             {

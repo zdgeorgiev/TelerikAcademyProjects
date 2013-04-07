@@ -20,8 +20,11 @@ public class TreasureOfShaperDivine : Chest
             new Item(ReleasedItem.Ancient_Crescent, global::ItemRarity.Rare),
             new Item(ReleasedItem.The_Horned_Mother, global::ItemRarity.Mythical),
             new Item(ReleasedItem.Feral_the_Werebat, global::ItemRarity.Mythical),
-            new Item(ReleasedItem.Wings_of_the_Ruby_Web, global::ItemRarity.Legendary),
+            new Item(ReleasedItem.Wings_of_the_Ruby_Web, global::ItemRarity.Legendary)
+        };
 
+        this.allAvaibleCouriers = new List<Item>()
+        {            
             new Item(ReleasedItem.Fearless_Badger, global::ItemRarity.Mythical),
             new Item(ReleasedItem.Stumpy_the_Nature_Attendant, global::ItemRarity.Mythical),
             new Item(ReleasedItem.Trusty_Mountain_Yak, global::ItemRarity.Mythical),
@@ -34,7 +37,7 @@ public class TreasureOfShaperDivine : Chest
             new Item(ReleasedItem.Baby_Roshan, global::ItemRarity.Legendary),
             new Item(ReleasedItem.Prismatic_Drake, global::ItemRarity.Mythical),
             new Item(ReleasedItem.NaVi_Weaselcrow, global::ItemRarity.Legendary),
-            new Item(ReleasedItem.Cluckles_the_Brave, global::ItemRarity.Legendary),
+            new Item(ReleasedItem.Cluckles_the_Brave, global::ItemRarity.Legendary)
         };
     }
 }

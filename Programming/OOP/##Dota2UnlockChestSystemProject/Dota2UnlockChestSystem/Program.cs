@@ -12,7 +12,7 @@ class Program
     static void Main(string[] args)
     {
         UserAccount myAccount = new UserAccount();
-        
+
         myAccount.AddItem(new Item(ReleasedItem.Treasure_Key_of_the_Cursed_Wood, ItemRarity.Rare));
         myAccount.AddItem(new Item(ReleasedItem.Treasure_of_the_Cursed_Wood, ItemRarity.Rare));
 
