@@ -24,14 +24,14 @@ public class ItemLibrary
         dictionary.Add("treasure_key_of_the_cursed_wood", new Item(ReleasedItem.Treasure_Key_of_the_Cursed_Wood, ItemRarity.Rare));
         dictionary.Add("tkcursedwood", new Item(ReleasedItem.Treasure_Key_of_the_Cursed_Wood, ItemRarity.Rare));
 
-        //TreasureKey of the sharper divine
-        dictionary.Add("treasure_key_of_the_shaper_divine", new Item(ReleasedItem.Treasure_Key_of_the_Shaper_Divine, ItemRarity.Rare));
-        dictionary.Add("tksharperdevine", new Item(ReleasedItem.Treasure_Key_of_the_Shaper_Divine, ItemRarity.Rare));
+        //TreasureKey of the shaper devine
+        dictionary.Add("treasure_key_of_the_shaper_devine", new Item(ReleasedItem.Treasure_Key_of_the_Shaper_Divine, ItemRarity.Rare));
+        dictionary.Add("tkshaperdevine", new Item(ReleasedItem.Treasure_Key_of_the_Shaper_Divine, ItemRarity.Rare));
         # endregion
 
         #region Chests
         dictionary.Add("treasure_of_the_cursed_wood", new TreasureOfCursedWood());
-        dictionary.Add("treasure_of_the_sharper_devine", new TreasureOfShaperDivine());
+        dictionary.Add("treasure_of_the_shaper_devine", new TreasureOfShaperDivine());
         #endregion
     }
 }
