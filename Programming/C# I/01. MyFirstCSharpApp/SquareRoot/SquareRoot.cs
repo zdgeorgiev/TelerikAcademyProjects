@@ -4,6 +4,6 @@ class SquareRoot
 {
     static void Main()
     {
-        Console.WriteLine(Math.Sqrt(12345));
+        Console.WriteLine(Math.Pow(12345, 2));
     }
 }

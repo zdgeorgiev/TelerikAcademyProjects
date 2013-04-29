@@ -7,4 +7,3 @@ class CurrentDateAndTime
         Console.WriteLine(DateTime.Now);
     }
 }
-

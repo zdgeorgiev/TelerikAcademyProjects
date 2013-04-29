@@ -4,7 +4,7 @@ class PrintMyName
 {
     static void Main()
     {
-        Console.WriteLine("Zdravko");
+        Console.WriteLine("BoikoBorisov");
     }
 }
 
