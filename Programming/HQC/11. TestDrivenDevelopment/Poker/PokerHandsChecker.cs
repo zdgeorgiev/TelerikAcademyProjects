@@ -97,6 +97,7 @@ namespace Poker
                 }
 
                 bool hasAnotherPair = false;
+                const int twoPairsCardsRequired = 2;
 
                 for (int i = 0; i < hand.Cards.Count; i++)
                 {
@@ -109,7 +110,7 @@ namespace Poker
                         {
                             requiredCards++;
 
-                            if (requiredCards == 2)
+                            if (requiredCards == twoPairsCardsRequired)
                             {
                                 hasAnotherPair = true;
                                 break;
