@@ -65,7 +65,7 @@ namespace Poker
 
         public bool IsFullHouse(IHand hand)
         {
-            if (IsValidHand(hand) && !IsFourOfAKind(hand))
+            if (IsValidHand(hand))
             {
                 bool hasThreeSameCards = false;
                 int requiredCards = 1;
