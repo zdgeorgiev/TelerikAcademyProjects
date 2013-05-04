@@ -214,13 +214,13 @@ namespace Poker
                 }
             }
 
-            bool hasCardTwo = CheckForSpecificCard(hand, 5);
+            bool hasCardFive = CheckForSpecificCard(hand, 5);
 
             //If you have Ace check do you have 2.If you have then ace
             //will be used for low straight and make 5 highest card.
-            if (higherCardFace == 14 && hasCardTwo)
+            if (higherCardFace == 14 && hasCardFive)
             {
-                higherCardFace = 5;
+                higherCardFace = (int)CardFace.Five;
             }
 
             bool hasStraight = false;
