@@ -17,7 +17,7 @@ class BoolGender
                 isValidGender = true;
 
                 //If first letter in input is m you are male
-                if (input[0].ToString() == "m")
+                if (input[0].ToString().ToLower() == "m")
                 {
                     Console.WriteLine("You are male.");
                 }
