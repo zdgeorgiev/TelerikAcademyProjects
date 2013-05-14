@@ -5,8 +5,7 @@ class BoolGender
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hey, please enter your gender!");
-        Console.WriteLine("M/F");
+        Console.WriteLine("Hey, please enter your gender! (M/F)\n");
         string input = Console.ReadLine();
         string[] validAnswers = new string[] { "m", "male", "f", "female" };
         bool isValidGender = false;

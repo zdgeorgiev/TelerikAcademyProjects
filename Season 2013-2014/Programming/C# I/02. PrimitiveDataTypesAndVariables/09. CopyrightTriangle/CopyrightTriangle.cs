@@ -3,29 +3,24 @@ using System.Text;
 
 class CopyrightTriangle
 {
-    /// <summary>
-    /// This program wont work for other numbers because
-    /// the task isnt given correct. !
-    /// </summary>
-    /// <param name="args"></param>
     static void Main(string[] args)
     {
         Console.OutputEncoding = Encoding.UTF8;
-        int n = 9;
+        //numbers of rows and cols
+        Console.Write("Enter a number for rows and cols. ");
+        int n = int.Parse(Console.ReadLine());
+        Console.WriteLine();
 
-        for (int i = 0; i < n / 2 + 1; i++)
+        for (int i = 0; i < n ; i++)
         {
-            int leftSpaces = n / 2 - i;
-            char copyRight = '©';
+            int leftSpaces = n - i - 1;
+            char copyRight = '\u00A9';
             int rightSpaces = leftSpaces;
 
-            if (i % 2 == 0)
-            {
-                Console.Write(new string(' ', leftSpaces));
-                Console.Write(new string(copyRight, i + 1));
-                Console.Write(new string(' ', rightSpaces));
-                Console.WriteLine();
-            }
+            Console.Write(new string(' ', leftSpaces));
+            Console.Write(new string(copyRight, i + 1));
+            Console.Write(new string(' ', rightSpaces));
+            Console.WriteLine();
         }
     }
 }

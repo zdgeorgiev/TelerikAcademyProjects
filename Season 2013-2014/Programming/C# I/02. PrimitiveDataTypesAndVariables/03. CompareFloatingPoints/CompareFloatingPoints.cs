@@ -4,12 +4,15 @@ class CompareFloatingPoints
 {
     static void Main(string[] args)
     {
-        Console.WriteLine(5.3f == 6.01f);
+        decimal firstValue = 5.3M;
+        decimal secondValue = 6.01M;
 
-        decimal firstValue = Math.Round(5.00000001M, 7);
-        decimal secondValue = Math.Round(5.00000003M, 7);
+        Console.WriteLine((float)firstValue == (float)secondValue);
 
-        Console.WriteLine(firstValue == secondValue);
+        decimal firstValue2 = 5.00000001M;
+        decimal secondValue2 = 5.00000003M;
+
+        Console.WriteLine((float)firstValue2 == (float)secondValue2);
     }
 }
 
