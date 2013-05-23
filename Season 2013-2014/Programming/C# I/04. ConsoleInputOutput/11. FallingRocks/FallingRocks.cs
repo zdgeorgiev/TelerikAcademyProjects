@@ -15,15 +15,23 @@ class FallingRocks
         int gameSpeed = 0;
         Console.Clear();
 
-
         Dwarf dwarf = new Dwarf(dwarfSymbol, new Field(gameFieldWidth));
         Rock rock = new Rock(new Field(gameFieldWidth), maxMinesPerRow);
         List<Rock> allRocks = new List<Rock>();
+        List<ConsoleColor> allColors = new List<ConsoleColor>()
+        {
+            ConsoleColor.Gray,
+            ConsoleColor.Magenta,
+            ConsoleColor.Cyan,
+            ConsoleColor.Green,
+            ConsoleColor.Yellow,
+            ConsoleColor.White
+        };
 
+        Random randomGenerator = new Random();
         DateTime startingTime = DateTime.Now;
         DateTime endingTime;
         int result = 0;
-        //int gameSpeed = 300 - result / 10 - 10;
         bool isLose = false;
 
         RemoveScrollBars();
@@ -31,6 +39,7 @@ class FallingRocks
         do
         {
             Console.Clear();
+            PlaceTheWalls(gameFieldWidth);
             rock.AddOneLineRocks(allRocks);
 
             while (Console.KeyAvailable)
@@ -46,7 +55,9 @@ class FallingRocks
             foreach (Rock currentRock in allRocks)
             {
                 Console.SetCursorPosition(currentRock.Y, currentRock.X);
+                Console.ForegroundColor = allColors[randomGenerator.Next(0, allColors.Count)];
                 Console.WriteLine(currentRock.Symbol);
+                Console.ResetColor();
 
                 if (currentRock.Y == dwarf.Y && currentRock.X == Console.WindowHeight - 2)
                 {
@@ -73,26 +84,35 @@ class FallingRocks
         while (!isLose);
     }
 
+    private static void PlaceTheWalls(int gameFieldWidth)
+    {
+        for (int i = 0; i < Console.WindowHeight; i++)
+        {
+            Console.SetCursorPosition(gameFieldWidth + 1, i);
+            Console.WriteLine("||");
+        }
+    }
+
     private static void PrintTheResult(DateTime totalPlaying, DateTime losingTime, int GameSpeed, int result)
     {
         Console.Clear();
         Console.WriteLine("GAME OVER!");
-        Console.WriteLine("You've done it very well.\n You have survived for {0}", losingTime - totalPlaying);
+        Console.WriteLine("You've done it very well.\nYou have survived for {0}", losingTime - totalPlaying);
         Console.WriteLine("Final score : {0}", result);
     }
 
     private static void PrintTheResult(int result, int gameSpeed)
     {
-        Console.SetCursorPosition(Console.WindowWidth / 2, Console.WindowHeight / 2 - 5);
+        Console.SetCursorPosition(Console.WindowWidth / 2 + 10, Console.WindowHeight / 2 - 1);
         Console.WriteLine("Result = {0}", result);
-        Console.SetCursorPosition(Console.WindowWidth / 2, Console.WindowHeight / 2 - 6);
+        Console.SetCursorPosition(Console.WindowWidth / 2 + 10, Console.WindowHeight / 2 + 1);
         Console.WriteLine("Gamespeed = {0}", gameSpeed);
     }
 
     private static void RemoveScrollBars()
     {
-        Console.BufferHeight = Console.WindowHeight;
-        Console.BufferWidth = Console.WindowWidth;
+        Console.BufferHeight = Console.WindowHeight = 28;
+        Console.BufferWidth = Console.WindowWidth = 60;
     }
 }
 
