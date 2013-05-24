@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "11. FallingRocks", "11. Fal
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "06. QuadraticEquasion", "06. QuadraticEquasion\06. QuadraticEquasion.csproj", "{2748AF7A-33F5-495E-8884-CDDC3E1ECFD0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "10. SumWithPrecision", "10. SumWithPrecision\10. SumWithPrecision.csproj", "{5D4B34FA-75F5-4A5F-98BF-156FA6AC61E9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -67,6 +69,10 @@ Global
 		{2748AF7A-33F5-495E-8884-CDDC3E1ECFD0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2748AF7A-33F5-495E-8884-CDDC3E1ECFD0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2748AF7A-33F5-495E-8884-CDDC3E1ECFD0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D4B34FA-75F5-4A5F-98BF-156FA6AC61E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D4B34FA-75F5-4A5F-98BF-156FA6AC61E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D4B34FA-75F5-4A5F-98BF-156FA6AC61E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D4B34FA-75F5-4A5F-98BF-156FA6AC61E9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
