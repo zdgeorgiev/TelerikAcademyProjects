@@ -37,7 +37,7 @@ class AlphabeticalNumbers999
                 }
             }
         }
-        else if (userNumber < 100 && userNumber >= 19)
+        else if (userNumber < 100 && userNumber > 19)
         {
             int leftNumber = userNumber % 100 / 10 * 10;
             int rightNumber = userNumber % 100 % 10;
@@ -50,10 +50,6 @@ class AlphabeticalNumbers999
             {
                 numberInWords += NumberInWords(leftNumber);
             }
-        }
-        else if (userNumber <= 19)
-        {
-            numberInWords += NumberInWords(userNumber);
         }
         else
         {
