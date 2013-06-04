@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Text;
 
 class AlphabeticalNumbers999
 {
@@ -27,9 +26,34 @@ class AlphabeticalNumbers999
                     int leftNumber = secondDigits / 10 * 10;
                     int rightNumber = secondDigits % 10;
 
-                    numberInWords += " " + NumberInWords(leftNumber) + " " + NumberInWords(rightNumber);
+                    if (rightNumber != 0)
+                    {
+                        numberInWords += " " + NumberInWords(leftNumber) + " " + NumberInWords(rightNumber);
+                    }
+                    else
+                    {
+                        numberInWords += " and " + NumberInWords(leftNumber);
+                    }
                 }
             }
+        }
+        else if (userNumber < 100 && userNumber >= 19)
+        {
+            int leftNumber = userNumber % 100 / 10 * 10;
+            int rightNumber = userNumber % 100 % 10;
+
+            if (rightNumber != 0)
+            {
+                numberInWords += NumberInWords(leftNumber) + " " + NumberInWords(rightNumber);
+            }
+            else
+            {
+                numberInWords += NumberInWords(leftNumber);
+            }
+        }
+        else if (userNumber <= 19)
+        {
+            numberInWords += NumberInWords(userNumber);
         }
         else
         {
