@@ -1,0 +1,6 @@
+D:\CSharpApps\SampleExam\09. CoordinateSystem\bin\Debug\_09.CoordinateSystem.exe.config
+D:\CSharpApps\SampleExam\09. CoordinateSystem\bin\Debug\_09.CoordinateSystem.exe
+D:\CSharpApps\SampleExam\09. CoordinateSystem\bin\Debug\_09.CoordinateSystem.pdb
+D:\CSharpApps\SampleExam\09. CoordinateSystem\obj\Debug\09. CoordinateSystem.csprojResolveAssemblyReference.cache
+D:\CSharpApps\SampleExam\09. CoordinateSystem\obj\Debug\_09.CoordinateSystem.exe
+D:\CSharpApps\SampleExam\09. CoordinateSystem\obj\Debug\_09.CoordinateSystem.pdb

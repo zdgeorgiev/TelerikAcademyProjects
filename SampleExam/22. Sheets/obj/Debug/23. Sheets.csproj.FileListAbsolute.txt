@@ -1,0 +1,6 @@
+D:\CSharpApps\SampleExam\22. Sheets\bin\Debug\_22.Sheets.exe.config
+D:\CSharpApps\SampleExam\22. Sheets\bin\Debug\_22.Sheets.exe
+D:\CSharpApps\SampleExam\22. Sheets\bin\Debug\_22.Sheets.pdb
+D:\CSharpApps\SampleExam\22. Sheets\obj\Debug\23. Sheets.csprojResolveAssemblyReference.cache
+D:\CSharpApps\SampleExam\22. Sheets\obj\Debug\_22.Sheets.exe
+D:\CSharpApps\SampleExam\22. Sheets\obj\Debug\_22.Sheets.pdb

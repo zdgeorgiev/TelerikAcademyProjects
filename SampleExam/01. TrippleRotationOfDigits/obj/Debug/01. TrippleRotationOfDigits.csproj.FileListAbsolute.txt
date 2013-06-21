@@ -1,0 +1,6 @@
+D:\CSharpApps\SampleExam\01. TrippleRotationOfDigits\bin\Debug\_01.TrippleRotationOfDigits.exe.config
+D:\CSharpApps\SampleExam\01. TrippleRotationOfDigits\obj\Debug\01. TrippleRotationOfDigits.csprojResolveAssemblyReference.cache
+D:\CSharpApps\SampleExam\01. TrippleRotationOfDigits\bin\Debug\_01.TrippleRotationOfDigits.exe
+D:\CSharpApps\SampleExam\01. TrippleRotationOfDigits\bin\Debug\_01.TrippleRotationOfDigits.pdb
+D:\CSharpApps\SampleExam\01. TrippleRotationOfDigits\obj\Debug\_01.TrippleRotationOfDigits.exe
+D:\CSharpApps\SampleExam\01. TrippleRotationOfDigits\obj\Debug\_01.TrippleRotationOfDigits.pdb

@@ -1,0 +1,5 @@
+D:\CSharpApps\SampleExam\16. WeAllLoveBits\bin\Debug\_16.WeAllLoveBits.exe.config
+D:\CSharpApps\SampleExam\16. WeAllLoveBits\bin\Debug\_16.WeAllLoveBits.exe
+D:\CSharpApps\SampleExam\16. WeAllLoveBits\bin\Debug\_16.WeAllLoveBits.pdb
+D:\CSharpApps\SampleExam\16. WeAllLoveBits\obj\Debug\_16.WeAllLoveBits.exe
+D:\CSharpApps\SampleExam\16. WeAllLoveBits\obj\Debug\_16.WeAllLoveBits.pdb

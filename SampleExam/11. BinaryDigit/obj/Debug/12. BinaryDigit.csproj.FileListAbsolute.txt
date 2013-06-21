@@ -1,0 +1,3 @@
+D:\CSharpApps\SampleExam\11. BinaryDigit\bin\Debug\_11.BinaryDigit.exe.config
+D:\CSharpApps\SampleExam\11. BinaryDigit\obj\Debug\_11.BinaryDigit.exe
+D:\CSharpApps\SampleExam\11. BinaryDigit\obj\Debug\_11.BinaryDigit.pdb

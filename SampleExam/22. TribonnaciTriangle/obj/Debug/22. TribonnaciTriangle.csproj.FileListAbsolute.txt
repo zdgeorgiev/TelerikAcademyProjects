@@ -1,0 +1,5 @@
+D:\CSharpApps\SampleExam\22. TribonnaciTriangle\bin\Debug\_22.TribonnaciTriangle.exe.config
+D:\CSharpApps\SampleExam\22. TribonnaciTriangle\bin\Debug\_22.TribonnaciTriangle.exe
+D:\CSharpApps\SampleExam\22. TribonnaciTriangle\bin\Debug\_22.TribonnaciTriangle.pdb
+D:\CSharpApps\SampleExam\22. TribonnaciTriangle\obj\Debug\_22.TribonnaciTriangle.exe
+D:\CSharpApps\SampleExam\22. TribonnaciTriangle\obj\Debug\_22.TribonnaciTriangle.pdb

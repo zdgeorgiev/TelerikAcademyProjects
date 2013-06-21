@@ -1,0 +1,6 @@
+D:\CSharpApps\SampleExam\21. QuadronacciRectangle\bin\Debug\_21.QuadronacciRectangle.exe.config
+D:\CSharpApps\SampleExam\21. QuadronacciRectangle\bin\Debug\_21.QuadronacciRectangle.exe
+D:\CSharpApps\SampleExam\21. QuadronacciRectangle\bin\Debug\_21.QuadronacciRectangle.pdb
+D:\CSharpApps\SampleExam\21. QuadronacciRectangle\obj\Debug\21. QuadronacciRectangle.csprojResolveAssemblyReference.cache
+D:\CSharpApps\SampleExam\21. QuadronacciRectangle\obj\Debug\_21.QuadronacciRectangle.exe
+D:\CSharpApps\SampleExam\21. QuadronacciRectangle\obj\Debug\_21.QuadronacciRectangle.pdb

@@ -1,0 +1,6 @@
+D:\CSharpApps\SampleExam\04. LeastMajorityMultiple\bin\Debug\_04.LeastMajorityMultiple.exe.config
+D:\CSharpApps\SampleExam\04. LeastMajorityMultiple\obj\Debug\04. LeastMajorityMultiple.csprojResolveAssemblyReference.cache
+D:\CSharpApps\SampleExam\04. LeastMajorityMultiple\bin\Debug\_04.LeastMajorityMultiple.exe
+D:\CSharpApps\SampleExam\04. LeastMajorityMultiple\bin\Debug\_04.LeastMajorityMultiple.pdb
+D:\CSharpApps\SampleExam\04. LeastMajorityMultiple\obj\Debug\_04.LeastMajorityMultiple.exe
+D:\CSharpApps\SampleExam\04. LeastMajorityMultiple\obj\Debug\_04.LeastMajorityMultiple.pdb

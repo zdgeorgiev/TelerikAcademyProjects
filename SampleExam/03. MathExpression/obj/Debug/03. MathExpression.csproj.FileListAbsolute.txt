@@ -1,0 +1,1 @@
+D:\CSharpApps\SampleExam\03. MathExpression\bin\Debug\_03.MathExpression.exe.config
