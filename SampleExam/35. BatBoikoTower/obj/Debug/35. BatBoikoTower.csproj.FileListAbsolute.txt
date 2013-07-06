@@ -1,0 +1,6 @@
+D:\CSharpApps\SampleExam\35. BatBoikoTower\bin\Debug\_35.BatBoikoTower.exe.config
+D:\CSharpApps\SampleExam\35. BatBoikoTower\obj\Debug\35. BatBoikoTower.csprojResolveAssemblyReference.cache
+D:\CSharpApps\SampleExam\35. BatBoikoTower\bin\Debug\_35.BatBoikoTower.exe
+D:\CSharpApps\SampleExam\35. BatBoikoTower\bin\Debug\_35.BatBoikoTower.pdb
+D:\CSharpApps\SampleExam\35. BatBoikoTower\obj\Debug\_35.BatBoikoTower.exe
+D:\CSharpApps\SampleExam\35. BatBoikoTower\obj\Debug\_35.BatBoikoTower.pdb

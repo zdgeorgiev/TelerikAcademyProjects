@@ -1,0 +1,6 @@
+D:\CSharpApps\SampleExam\34. Neurons\bin\Debug\_34.Neurons.exe.config
+D:\CSharpApps\SampleExam\34. Neurons\bin\Debug\_34.Neurons.exe
+D:\CSharpApps\SampleExam\34. Neurons\bin\Debug\_34.Neurons.pdb
+D:\CSharpApps\SampleExam\34. Neurons\obj\Debug\34. Neurons.csprojResolveAssemblyReference.cache
+D:\CSharpApps\SampleExam\34. Neurons\obj\Debug\_34.Neurons.exe
+D:\CSharpApps\SampleExam\34. Neurons\obj\Debug\_34.Neurons.pdb
