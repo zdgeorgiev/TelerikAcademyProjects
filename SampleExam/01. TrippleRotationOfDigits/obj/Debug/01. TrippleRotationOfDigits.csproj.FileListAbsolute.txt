@@ -4,3 +4,6 @@ D:\CSharpApps\SampleExam\01. TrippleRotationOfDigits\bin\Debug\_01.TrippleRotati
 D:\CSharpApps\SampleExam\01. TrippleRotationOfDigits\bin\Debug\_01.TrippleRotationOfDigits.pdb
 D:\CSharpApps\SampleExam\01. TrippleRotationOfDigits\obj\Debug\_01.TrippleRotationOfDigits.exe
 D:\CSharpApps\SampleExam\01. TrippleRotationOfDigits\obj\Debug\_01.TrippleRotationOfDigits.pdb
+D:\Downloads\GitHub\01. TelerikAcademyProjects\SampleExam\01. TrippleRotationOfDigits\bin\Debug\_01.TrippleRotationOfDigits.exe.config
+D:\Downloads\GitHub\01. TelerikAcademyProjects\SampleExam\01. TrippleRotationOfDigits\obj\Debug\_01.TrippleRotationOfDigits.exe
+D:\Downloads\GitHub\01. TelerikAcademyProjects\SampleExam\01. TrippleRotationOfDigits\obj\Debug\_01.TrippleRotationOfDigits.pdb

@@ -4,3 +4,6 @@ D:\CSharpApps\SampleExam\29. SevenlandNumber\bin\Debug\_29.SevenlandNumber.pdb
 D:\CSharpApps\SampleExam\29. SevenlandNumber\obj\Debug\29. SevenlandNumber.csprojResolveAssemblyReference.cache
 D:\CSharpApps\SampleExam\29. SevenlandNumber\obj\Debug\_29.SevenlandNumber.exe
 D:\CSharpApps\SampleExam\29. SevenlandNumber\obj\Debug\_29.SevenlandNumber.pdb
+D:\Downloads\GitHub\01. TelerikAcademyProjects\SampleExam\29. SevenlandNumber\bin\Debug\_29.SevenlandNumber.exe.config
+D:\Downloads\GitHub\01. TelerikAcademyProjects\SampleExam\29. SevenlandNumber\obj\Debug\_29.SevenlandNumber.exe
+D:\Downloads\GitHub\01. TelerikAcademyProjects\SampleExam\29. SevenlandNumber\obj\Debug\_29.SevenlandNumber.pdb
