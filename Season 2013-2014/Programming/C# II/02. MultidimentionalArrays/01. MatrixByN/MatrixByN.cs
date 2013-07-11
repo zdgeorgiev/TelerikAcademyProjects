@@ -202,12 +202,6 @@ class MatrixByN
             {
                 matrix[row, col] = currentNumber;
                 currentNumber++;
-
-                if (row == matrix.GetLength(0) - 1)
-                {
-                    row = 0;
-                    break;
-                }
             }
         }
     }
