@@ -18,12 +18,13 @@ class BigIntegerFactorial
 
     static void Main(string[] args)
     {
-        int number = int.Parse(Console.ReadLine());
-
-        Console.WriteLine("Factorial of {0} is {1}", number, BigFactorial(number));
+        for (int i = 1; i <= 100; i++)
+        {
+            Console.WriteLine(BigFactorial(i));
+        }
     }
 }
 
 //Write a program to calculate n! for each n in the range [1..100].
 //Hint: Implement first a method that multiplies a number represented
-//as array of digits by given integer number. 
+//as array of digits by given integer number.
