@@ -1,0 +1,28 @@
+ 1. using System;
+ 2. using System.IO;
+ 3. 
+ 4. class InsertLines
+ 5. {
+ 6.     static void Main(string[] args)
+ 7.     {
+ 8.         StreamReader reader = new StreamReader(@"D:\CSharpApps\13. Text Files\03. InsertLines\InsertLines.cs");
+ 9. 
+10.         using (StreamWriter writer = new StreamWriter("../../output.txt"))
+11.         {
+12.             string line = reader.ReadLine();
+13.             int lineNumber = 1;
+14. 
+15.             while (line != null)
+16.             {
+17.                 writer.WriteLine("{0,2}. {1}", lineNumber, line);
+18.                 lineNumber++;
+19.                 line = reader.ReadLine();
+20.             }
+21. 
+22.             Console.WriteLine("Finished.");
+23.         }
+24.     }
+25. }
+26. 
+27. //Write a program that reads a text file and inserts line numbers 
+28. //in front of each of its lines. The result should be written to another text file.

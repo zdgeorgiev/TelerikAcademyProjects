@@ -1,0 +1,4 @@
+cats - 2 times
+cows - 2 times
+dogs - 4 times
+

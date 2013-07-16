@@ -1,0 +1,1 @@
+Best sum 2x2 from the matrix is 17
