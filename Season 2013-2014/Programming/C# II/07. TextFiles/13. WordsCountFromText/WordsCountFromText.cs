@@ -16,7 +16,8 @@ class WordsCountFromText
             words = searchedWordsReader.ReadToEnd();
         }
 
-        string[] allSearchedWords = words.Split(',', ' ');
+        string[] allSearchedWords = words.Split(new char[] { ',', ' ' }, 
+            StringSplitOptions.RemoveEmptyEntries);
         //Sort the words in descending order
         Array.Sort(allSearchedWords);
         int[] searchedWordsCounter = new int[allSearchedWords.Length];
