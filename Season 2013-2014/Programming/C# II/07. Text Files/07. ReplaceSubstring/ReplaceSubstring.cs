@@ -11,22 +11,25 @@ class ReplaceSubstring
     static void Main(string[] args)
     {
         StreamReader reader = new StreamReader("../../input.txt");
-
         StringBuilder textFromTheFile = new StringBuilder();
-        string line = reader.ReadLine();
 
-        while (line != null)
+        using (reader)
         {
-            textFromTheFile.AppendLine(line);
-            line = reader.ReadLine();
-        }
+            string line = reader.ReadLine();
 
-        for (int i = 0; i < textFromTheFile.Length - (SearchedWord.Length - 1); i++)
-        {
-            //if found the searched word
-            if (textFromTheFile.ToString().Substring(i, SearchedWord.Length) == SearchedWord)
+            while (line != null)
             {
-                textFromTheFile.Replace(SearchedWord, ReplacedWord, i, ReplacedWord.Length);
+                textFromTheFile.AppendLine(line);
+                line = reader.ReadLine();
+            }
+
+            for (int i = 0; i < textFromTheFile.Length - (SearchedWord.Length - 1); i++)
+            {
+                //if found the searched word
+                if (textFromTheFile.ToString().Substring(i, SearchedWord.Length) == SearchedWord)
+                {
+                    textFromTheFile.Replace(SearchedWord, ReplacedWord, i, ReplacedWord.Length);
+                }
             }
         }
 

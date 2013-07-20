@@ -24,33 +24,36 @@ class WordsCountFromText
 
         using (StreamWriter writer = new StreamWriter("../../output.txt"))
         {
-            StringBuilder result = new StringBuilder();
-            string line = textReader.ReadLine();
-
-            while (line != null)
+            using (textReader)
             {
-                string[] allWordsFromTheLine = line.Split(' ');
+                StringBuilder result = new StringBuilder();
+                string line = textReader.ReadLine();
 
-                for (int searchedWord = 0; searchedWord < searchedWordsCounter.Length; searchedWord++)
+                while (line != null)
                 {
-                    for (int currentWord = 0; currentWord < allWordsFromTheLine.Length; currentWord++)
+                    string[] allWordsFromTheLine = line.Split(' ');
+
+                    for (int searchedWord = 0; searchedWord < searchedWordsCounter.Length; searchedWord++)
                     {
-                        if (allWordsFromTheLine[currentWord].Trim() == allSearchedWords[searchedWord].Trim())
+                        for (int currentWord = 0; currentWord < allWordsFromTheLine.Length; currentWord++)
                         {
-                            searchedWordsCounter[searchedWord]++;
+                            if (allWordsFromTheLine[currentWord].Trim() == allSearchedWords[searchedWord].Trim())
+                            {
+                                searchedWordsCounter[searchedWord]++;
+                            }
                         }
+
+                        result.AppendFormat("{0} - {1} times", allSearchedWords[searchedWord].Trim(),
+                            searchedWordsCounter[searchedWord]);
+                        result.AppendLine();
                     }
 
-                    result.AppendFormat("{0} - {1} times", allSearchedWords[searchedWord].Trim(),
-                        searchedWordsCounter[searchedWord]);
-                    result.AppendLine();
+                    line = textReader.ReadLine();
                 }
 
-                line = textReader.ReadLine();
+                writer.WriteLine(result);
+                Console.WriteLine("Finished.");
             }
-
-            writer.WriteLine(result);
-            Console.WriteLine("Finished.");
         }
     }
 }

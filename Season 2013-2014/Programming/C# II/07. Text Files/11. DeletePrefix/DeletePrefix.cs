@@ -12,18 +12,21 @@ class DeletePrefix
 
         using (StreamWriter writer = new StreamWriter("../../output.txt"))
         {
-            string line = reader.ReadLine();
-
-            while (line != null)
+            using (reader)
             {
-                string[] allWords = line.Split(' ', ',', '.');
+                string line = reader.ReadLine();
 
-                writer.WriteLine(RemoveThePrefix(PrefixValue, allWords));
+                while (line != null)
+                {
+                    string[] allWords = line.Split(' ', ',', '.');
 
-                line = reader.ReadLine();
+                    writer.WriteLine(RemoveThePrefix(PrefixValue, allWords));
+
+                    line = reader.ReadLine();
+                }
+
+                Console.WriteLine("Finished.");
             }
-
-            Console.WriteLine("Finished.");
         }
     }
 
@@ -33,20 +36,20 @@ class DeletePrefix
 
         for (int currentWord = 0; currentWord < allWords.Length; currentWord++)
         {
-            if (allWords[currentWord].Length <= PrefixValue.Length)
+            if (allWords[currentWord].Length <= prefix.Length)
             {
                 convertedWords.Append(allWords[currentWord] + " ");
             }
             else
             {
-                bool isPrefixFound = allWords[currentWord].Substring(0, PrefixValue.Length) == PrefixValue;
+                bool isPrefixFound = allWords[currentWord].Substring(0, prefix.Length) == prefix;
 
                 if (isPrefixFound)
                 {
                     string newWord = string.Empty;
 
                     //Get the rest of the word beggin from the next index after the prefix
-                    for (int j = PrefixValue.Length; j < allWords[currentWord].Length; j++)
+                    for (int j = prefix.Length; j < allWords[currentWord].Length; j++)
                     {
                         newWord += allWords[currentWord][j];
                     }

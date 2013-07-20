@@ -13,25 +13,28 @@ class SortNamesFromFile
 
         using (StreamWriter writer = new StreamWriter("../../output.txt"))
         {
-            string line = reader.ReadLine();
-
-            while (line != null)
+            using (reader)
             {
-                allNames.Add(line);
-                line = reader.ReadLine();
+                string line = reader.ReadLine();
+
+                while (line != null)
+                {
+                    allNames.Add(line);
+                    line = reader.ReadLine();
+                }
+
+                allNames.Sort();
+
+                StringBuilder result = new StringBuilder();
+                foreach (var name in allNames)
+                {
+                    result.AppendLine(name);
+                }
+
+                writer.WriteLine(result);
+
+                Console.WriteLine("Finished.");
             }
-
-            allNames.Sort();
-
-            StringBuilder result = new StringBuilder();
-            foreach (var name in allNames)
-            {
-                result.AppendLine(name);
-            }
-
-            writer.WriteLine(result);
-
-            Console.WriteLine("Finished.");
         }
     }
 }
