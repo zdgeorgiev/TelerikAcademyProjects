@@ -1,6 +1,0 @@
-D:\CSharpApps\SampleExam\08. WeAllLoveBits\bin\Debug\_08.WeAllLoveBits.exe.config
-D:\CSharpApps\SampleExam\08. WeAllLoveBits\bin\Debug\_08.WeAllLoveBits.exe
-D:\CSharpApps\SampleExam\08. WeAllLoveBits\bin\Debug\_08.WeAllLoveBits.pdb
-D:\CSharpApps\SampleExam\08. WeAllLoveBits\obj\Debug\08. WeAllLoveBits.csprojResolveAssemblyReference.cache
-D:\CSharpApps\SampleExam\08. WeAllLoveBits\obj\Debug\_08.WeAllLoveBits.exe
-D:\CSharpApps\SampleExam\08. WeAllLoveBits\obj\Debug\_08.WeAllLoveBits.pdb

@@ -1,6 +1,0 @@
-D:\CSharpApps\SampleExam\03. MathExpression\obj\Debug\02. MathExpression.csprojResolveAssemblyReference.cache
-D:\CSharpApps\SampleExam\03. MathExpression\bin\Debug\_03.MathExpression.exe.config
-D:\CSharpApps\SampleExam\03. MathExpression\bin\Debug\_03.MathExpression.exe
-D:\CSharpApps\SampleExam\03. MathExpression\bin\Debug\_03.MathExpression.pdb
-D:\CSharpApps\SampleExam\03. MathExpression\obj\Debug\_03.MathExpression.exe
-D:\CSharpApps\SampleExam\03. MathExpression\obj\Debug\_03.MathExpression.pdb

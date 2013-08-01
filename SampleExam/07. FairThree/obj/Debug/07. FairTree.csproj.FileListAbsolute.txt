@@ -1,5 +1,0 @@
-D:\CSharpApps\SampleExam\07. FairThree\bin\Debug\_07.FairThree.exe.config
-D:\CSharpApps\SampleExam\07. FairThree\bin\Debug\_07.FairThree.exe
-D:\CSharpApps\SampleExam\07. FairThree\bin\Debug\_07.FairThree.pdb
-D:\CSharpApps\SampleExam\07. FairThree\obj\Debug\_07.FairThree.exe
-D:\CSharpApps\SampleExam\07. FairThree\obj\Debug\_07.FairThree.pdb

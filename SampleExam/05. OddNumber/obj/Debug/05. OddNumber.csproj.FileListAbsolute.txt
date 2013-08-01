@@ -1,6 +1,0 @@
-D:\CSharpApps\SampleExam\05. OddNumber\bin\Debug\_05.OddNumber.exe.config
-D:\CSharpApps\SampleExam\05. OddNumber\obj\Debug\05. OddNumber.csprojResolveAssemblyReference.cache
-D:\CSharpApps\SampleExam\05. OddNumber\bin\Debug\_05.OddNumber.exe
-D:\CSharpApps\SampleExam\05. OddNumber\bin\Debug\_05.OddNumber.pdb
-D:\CSharpApps\SampleExam\05. OddNumber\obj\Debug\_05.OddNumber.exe
-D:\CSharpApps\SampleExam\05. OddNumber\obj\Debug\_05.OddNumber.pdb

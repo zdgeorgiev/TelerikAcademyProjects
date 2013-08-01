@@ -1,6 +1,0 @@
-D:\CSharpApps\SampleExam\15. Pillars\bin\Debug\_15.Pillars.exe.config
-D:\CSharpApps\SampleExam\15. Pillars\bin\Debug\_15.Pillars.exe
-D:\CSharpApps\SampleExam\15. Pillars\bin\Debug\_15.Pillars.pdb
-D:\CSharpApps\SampleExam\15. Pillars\obj\Debug\15. Pillars.csprojResolveAssemblyReference.cache
-D:\CSharpApps\SampleExam\15. Pillars\obj\Debug\_15.Pillars.exe
-D:\CSharpApps\SampleExam\15. Pillars\obj\Debug\_15.Pillars.pdb

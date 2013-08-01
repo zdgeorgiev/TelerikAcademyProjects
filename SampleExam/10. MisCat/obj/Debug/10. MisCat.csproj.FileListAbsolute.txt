@@ -1,6 +1,0 @@
-D:\CSharpApps\SampleExam\10. MisCat\bin\Debug\_10.MisCat.exe.config
-D:\CSharpApps\SampleExam\10. MisCat\bin\Debug\_10.MisCat.exe
-D:\CSharpApps\SampleExam\10. MisCat\bin\Debug\_10.MisCat.pdb
-D:\CSharpApps\SampleExam\10. MisCat\obj\Debug\10. MisCat.csprojResolveAssemblyReference.cache
-D:\CSharpApps\SampleExam\10. MisCat\obj\Debug\_10.MisCat.exe
-D:\CSharpApps\SampleExam\10. MisCat\obj\Debug\_10.MisCat.pdb

@@ -1,6 +1,0 @@
-D:\CSharpApps\SampleExam\32. BullsAndCows\bin\Debug\_32.BullsAndCows.exe.config
-D:\CSharpApps\SampleExam\32. BullsAndCows\bin\Debug\_32.BullsAndCows.exe
-D:\CSharpApps\SampleExam\32. BullsAndCows\bin\Debug\_32.BullsAndCows.pdb
-D:\CSharpApps\SampleExam\32. BullsAndCows\obj\Debug\_32.BullsAndCows.exe
-D:\CSharpApps\SampleExam\32. BullsAndCows\obj\Debug\_32.BullsAndCows.pdb
-D:\CSharpApps\SampleExam\32. BullsAndCows\obj\Debug\32. BullsAndCows.csprojResolveAssemblyReference.cache

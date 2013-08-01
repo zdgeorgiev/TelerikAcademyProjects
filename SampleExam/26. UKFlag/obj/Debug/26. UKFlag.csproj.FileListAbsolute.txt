@@ -1,6 +1,0 @@
-D:\CSharpApps\SampleExam\26. UKFlag\bin\Debug\_26.UKFlag.exe.config
-D:\CSharpApps\SampleExam\26. UKFlag\bin\Debug\_26.UKFlag.exe
-D:\CSharpApps\SampleExam\26. UKFlag\bin\Debug\_26.UKFlag.pdb
-D:\CSharpApps\SampleExam\26. UKFlag\obj\Debug\26. UKFlag.csprojResolveAssemblyReference.cache
-D:\CSharpApps\SampleExam\26. UKFlag\obj\Debug\_26.UKFlag.exe
-D:\CSharpApps\SampleExam\26. UKFlag\obj\Debug\_26.UKFlag.pdb

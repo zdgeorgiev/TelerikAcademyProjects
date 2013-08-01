@@ -1,6 +1,0 @@
-D:\CSharpApps\SampleExam\24. Carpets\bin\Debug\_24.Carpets.exe.config
-D:\CSharpApps\SampleExam\24. Carpets\bin\Debug\_24.Carpets.exe
-D:\CSharpApps\SampleExam\24. Carpets\bin\Debug\_24.Carpets.pdb
-D:\CSharpApps\SampleExam\24. Carpets\obj\Debug\_24.Carpets.exe
-D:\CSharpApps\SampleExam\24. Carpets\obj\Debug\_24.Carpets.pdb
-D:\CSharpApps\SampleExam\24. Carpets\obj\Debug\24. Carpets.csprojResolveAssemblyReference.cache

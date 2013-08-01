@@ -1,5 +1,0 @@
-D:\CSharpApps\SampleExam\30. CoffeMachine\bin\Debug\_30.CoffeMachine.exe.config
-D:\CSharpApps\SampleExam\30. CoffeMachine\bin\Debug\_30.CoffeMachine.exe
-D:\CSharpApps\SampleExam\30. CoffeMachine\bin\Debug\_30.CoffeMachine.pdb
-D:\CSharpApps\SampleExam\30. CoffeMachine\obj\Debug\_30.CoffeMachine.exe
-D:\CSharpApps\SampleExam\30. CoffeMachine\obj\Debug\_30.CoffeMachine.pdb

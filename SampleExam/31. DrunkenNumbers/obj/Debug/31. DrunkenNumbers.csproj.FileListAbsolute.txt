@@ -1,1 +1,0 @@
-D:\CSharpApps\SampleExam\31. DrunkenNumbers\bin\Debug\_31.DrunkenNumbers.exe.config

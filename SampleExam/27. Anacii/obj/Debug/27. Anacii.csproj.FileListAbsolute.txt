@@ -1,6 +1,0 @@
-D:\CSharpApps\SampleExam\27. Anacii\bin\Debug\_27.Anacii.exe.config
-D:\CSharpApps\SampleExam\27. Anacii\obj\Debug\27. Anacii.csprojResolveAssemblyReference.cache
-D:\CSharpApps\SampleExam\27. Anacii\bin\Debug\_27.Anacii.exe
-D:\CSharpApps\SampleExam\27. Anacii\bin\Debug\_27.Anacii.pdb
-D:\CSharpApps\SampleExam\27. Anacii\obj\Debug\_27.Anacii.exe
-D:\CSharpApps\SampleExam\27. Anacii\obj\Debug\_27.Anacii.pdb

@@ -1,6 +1,0 @@
-D:\CSharpApps\SampleExam\20. AngryBits\bin\Debug\_20.AngryBits.exe.config
-D:\CSharpApps\SampleExam\20. AngryBits\obj\Debug\20. AngryBits.csprojResolveAssemblyReference.cache
-D:\CSharpApps\SampleExam\20. AngryBits\bin\Debug\_20.AngryBits.exe
-D:\CSharpApps\SampleExam\20. AngryBits\bin\Debug\_20.AngryBits.pdb
-D:\CSharpApps\SampleExam\20. AngryBits\obj\Debug\_20.AngryBits.exe
-D:\CSharpApps\SampleExam\20. AngryBits\obj\Debug\_20.AngryBits.pdb
