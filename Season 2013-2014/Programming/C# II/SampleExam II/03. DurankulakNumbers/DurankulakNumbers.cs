@@ -1,13 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
-using System.Numerics;
 
 class DurankulakNumbers
 {
     static string[] InitializeTheLetters()
     {
-        // 55/100 dont work with Capital Letters like AA
-
         string[] allLetters = new string[168];
 
         for (int i = 0; i < 26; i++)
@@ -42,39 +40,36 @@ class DurankulakNumbers
 
         string number = Console.ReadLine();
 
+        Stack<int> numbers = new Stack<int>();
 
-        BigInteger finalNumber = 0;
-
-        if (number.Length % 2 != 0)
+        for (int i = 0; i < number.Length; i++)
         {
-            finalNumber += allLetters.ToList().IndexOf(number[0].ToString())
-                * (BigInteger)(Math.Pow((double)168, (double)(number.Length - 1) / 2));
+            string currentLetter = number.Substring(0, i + 1);
 
-            int index = (number.Length - 1) / 2;
-
-            for (int i = 1; i < number.Length; i += 2)
+            if (allLetters.Contains(currentLetter))
             {
-                finalNumber += allLetters.ToList().IndexOf(number.Substring(i, 2))
-                    * (BigInteger)(Math.Pow((double)168, (double)index - 1));
-
-                index--;
+                numbers.Push(allLetters.ToList().IndexOf(currentLetter));
+                number = number.Remove(0, currentLetter.Length);
+                i = -1;
             }
-
-            Console.WriteLine(finalNumber);
+            else
+            {
+                currentLetter = number.Substring(0, i + 2);
+                numbers.Push(allLetters.ToList().IndexOf(currentLetter));
+                number = number.Remove(0, currentLetter.Length);
+                i = -1;
+            }
         }
-        else
+
+        ulong result = (ulong)numbers.Pop();
+        ulong basePower = 168;
+
+        while (numbers.Count > 0)
         {
-            int index = number.Length / 2;
-
-            for (int i = 0; i < number.Length; i += 2)
-            {
-                finalNumber += allLetters.ToList().IndexOf(number.Substring(i, 2))
-                    * (BigInteger)(Math.Pow((double)168, (double)index - 1));
-
-                index--;
-            }
-
-            Console.WriteLine(finalNumber);
+            result += (ulong)numbers.Pop() * basePower;
+            basePower *= 168;
         }
+
+        Console.WriteLine(result);
     }
 }
