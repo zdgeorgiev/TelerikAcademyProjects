@@ -26,9 +26,12 @@ class Employees
 
         for (int i = 0; i < numberOfJobs; i++)
         {
-            string[] currentJob = Console.ReadLine().Split(new char[] {'-'}, StringSplitOptions.RemoveEmptyEntries);
+            string[] currentJob = Console.ReadLine().Split(new char[] { '-' }, StringSplitOptions.RemoveEmptyEntries);
 
-            jobs.Add(currentJob[0].Trim(), int.Parse(currentJob[1]));
+            if (!jobs.ContainsKey(currentJob[0].Trim()))
+            {
+                jobs.Add(currentJob[0].Trim(), int.Parse(currentJob[1]));
+            }
         }
 
         List<Human> allHumans = new List<Human>();
@@ -39,7 +42,7 @@ class Employees
         {
             string[] currentJob = Console.ReadLine().Split(new char[] { '-' }, StringSplitOptions.RemoveEmptyEntries);
 
-            string[] names = currentJob[0].Split(new char[] {' '}, StringSplitOptions.RemoveEmptyEntries);
+            string[] names = currentJob[0].Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
 
             allHumans.Add(new Human(names[0], names[1]));
             allHumans[i].JobRating = jobs[currentJob[1].Trim()];
@@ -52,13 +55,13 @@ class Employees
 
         foreach (var human in sortedJobsByRating)
         {
-                foreach (var name in sortedJobsByRating[c].OrderBy(h => h.LastName).ThenBy(h => h.Name))
-                {
-                    result.AppendLine(name.Name + " " + name.LastName);
-                }
+            foreach (var name in sortedJobsByRating[c].OrderBy(h => h.LastName).ThenBy(h => h.Name))
+            {
+                result.AppendLine(name.Name + " " + name.LastName);
+            }
 
-          c++;
-       }
+            c++;
+        }
 
         Console.WriteLine(result.ToString());
     }

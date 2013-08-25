@@ -16,53 +16,80 @@ class Brackets
             string[] allWords =
                 Console.ReadLine().Split(new char[] {'\r', '\n'}, StringSplitOptions.RemoveEmptyEntries);
 
+
             for (int j = 0; j < allWords.Length; j++)
             {
-                text.Append(allWords[j].Trim());
+                bool hasSpace = false;
+
+                for (int k = 0; k < allWords[j].Length; k++)
+                {
+                    if (!hasSpace || allWords[j][k] != ' ')
+                    {
+                        text.Append(allWords[j][k]);
+                        hasSpace = false;
+                    }
+
+                    if (allWords[j][k] == ' ')
+                    {
+                        hasSpace = true;
+                    }
+                }
+
+                text.AppendLine();
             }
         }
 
+        text.Length--;
+
         int tabCount = 0;
-        bool isTabAvaible = true;
+
+        StringBuilder result = new StringBuilder();
 
         for (int i = 0; i < text.Length; i++)
         {
-            if (text[i].ToString() == "{")
+            char currentChar = text[i];
+
+            if (currentChar == '{')
             {
-                isTabAvaible = true;
-
-                Console.WriteLine();
-
                 PrintTabs(tabSymbol, tabCount);
-
                 Console.WriteLine("{");
-
-                if (text[i + 1].ToString() != "}")
-                {
-                    tabCount++;
-                }
+                tabCount++;
             }
-            else if (text[i].ToString() == "}")
+            else if (currentChar == '}')
             {
-                isTabAvaible = true;
-
-                Console.WriteLine();
-
+                PrintTabs(tabSymbol, tabCount);
+                Console.WriteLine("}");
+            }
+            else if (currentChar != '\r' && currentChar != '\n' && currentChar != ' ')
+            {
                 PrintTabs(tabSymbol, tabCount);
 
-                Console.WriteLine("}");
-                tabCount--;
-            }
-            else
-            {
-                if (isTabAvaible)
+                while (i + 1 < text.Length && currentChar != '{' && currentChar != '}' &&
+                       currentChar != '\r' && currentChar != '\n')
                 {
-                    PrintTabs(tabSymbol, tabCount);
+                    Console.Write(currentChar);
+                    i++;
+                    currentChar = text[i];
                 }
+                i--;
+                Console.WriteLine();
+            }
 
-                isTabAvaible = false;
-
-                Console.Write(text[i]);
+            for (int j = i + 1; j < text.Length; j++)
+            {
+                if (text[j] == ' ')
+                {
+                    continue;
+                }
+                else if (text[j] == '}')
+                {
+                    tabCount--;
+                    break;
+                }
+                else
+                {
+                    break;
+                }
             }
         }
     }
