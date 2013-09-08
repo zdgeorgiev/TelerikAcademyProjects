@@ -1,45 +1,48 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Numerics;
 
 class NineGagNumbers
 {
     static void Main(string[] args)
     {
-        string input = Console.ReadLine();
+        string number = Console.ReadLine();
 
-        List<int> allNumbers = new List<int>();
+        Console.WriteLine(ConvertToDecimal(number));
+    }
 
-        for (int i = 0; i < input.Length; i++)
+    private static ulong ConvertToDecimal(string number)
+    {
+        Stack<int> numbersFromGags = new Stack<int>();
+
+        for (int i = 0; i < number.Length; i++)
         {
-            string currentNumber = input.Substring(0, i + 1);
+            string currentLetter = number.Substring(0, i + 1);
 
-            if (GetNumberFromGag(currentNumber) != -1)
+            if (GetNumberFromGag(currentLetter) != -1)
             {
-                allNumbers.Add(GetNumberFromGag(currentNumber));
-                input = input.Remove(0, i + 1);
+                numbersFromGags.Push(GetNumberFromGag(currentLetter));
+                number = number.Remove(0, currentLetter.Length);
                 i = 0;
             }
         }
 
-        int[] numbs = allNumbers.ToArray();
-        BigInteger ninePower = 9;
-        BigInteger totalNumber = numbs[numbs.Length - 1];
+        ulong finalNumber = 0;
+        ulong baseValue = 1;
 
-        for (int i = 1; i < numbs.Length; i++)
+        while (numbersFromGags.Count > 0)
         {
-            totalNumber += numbs[numbs.Length - 1 - i] * ninePower;
-            ninePower *= 9;
+            finalNumber += (ulong)numbersFromGags.Pop() * baseValue;
+            baseValue *= 9;
         }
 
-        Console.WriteLine(totalNumber);
+        return finalNumber;
     }
 
-    static int GetNumberFromGag(string letter)
+    static int GetNumberFromGag(string gag)
     {
-        int number = 0;
+        int number = -1;
 
-        switch (letter)
+        switch (gag)
         {
             case "-!": number = 0; break;
             case "**": number = 1; break;
@@ -50,6 +53,7 @@ class NineGagNumbers
             case "*!!!": number = 6; break;
             case "&*!": number = 7; break;
             case "!!**!-": number = 8; break;
+
             default:
                 number = -1; break;
         }

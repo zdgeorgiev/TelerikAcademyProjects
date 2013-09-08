@@ -1,75 +1,76 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Numerics;
 
 class DurankulakNumbers
 {
-    static string[] InitializeTheLetters()
-    {
-        string[] allLetters = new string[168];
-
-        for (int i = 0; i < 26; i++)
-        {
-            allLetters[i] = ((char)(65 + i)).ToString();
-        }
-
-        int currentPosition = 26;
-
-        for (int i = 0; i < 6; i++)
-        {
-            for (int j = 0; j < 26; j++)
-            {
-                if (currentPosition == 168)
-                {
-                    return allLetters;
-                }
-
-                allLetters[currentPosition] = ((char)(65 + i)).ToString().ToLower()
-                    + ((char)(65 + j)).ToString().ToUpper();
-
-                currentPosition++;
-            }
-        }
-
-        return allLetters;
-    }
+    static string[] allNumbers = new string[168];
 
     static void Main(string[] args)
     {
-        string[] allLetters = InitializeTheLetters();
+        InitializeTheNumbers();
 
-        string number = Console.ReadLine();
+        Console.WriteLine(ConvertToDecimal(Console.ReadLine()));
+    }
 
-        Stack<int> numbers = new Stack<int>();
+    private static BigInteger ConvertToDecimal(string numberLetters)
+    {
+        List<string> tempListNumbers = allNumbers.ToList();
 
-        for (int i = 0; i < number.Length; i++)
+        Stack<string> allLetters = new Stack<string>();
+
+        for (int i = 0; i < numberLetters.Length; i++)
         {
-            string currentLetter = number.Substring(0, i + 1);
+            string currentLetter = numberLetters.Substring(0, 1);
 
-            if (allLetters.Contains(currentLetter))
+            if (tempListNumbers.Contains(currentLetter))
             {
-                numbers.Push(allLetters.ToList().IndexOf(currentLetter));
-                number = number.Remove(0, currentLetter.Length);
-                i = -1;
+                allLetters.Push(currentLetter);
+                numberLetters = numberLetters.Substring(1);
             }
             else
             {
-                currentLetter = number.Substring(0, i + 2);
-                numbers.Push(allLetters.ToList().IndexOf(currentLetter));
-                number = number.Remove(0, currentLetter.Length);
-                i = -1;
+                allLetters.Push(numberLetters.Substring(0, 2));
+                numberLetters = numberLetters.Substring(2);
+            }
+
+            i = -1;
+        }
+
+        BigInteger baseValue = 1;
+        BigInteger finalNumber = 0;
+
+        while (allLetters.Count > 0)
+        {
+            finalNumber += tempListNumbers.IndexOf(allLetters.Pop()) * baseValue;
+            baseValue *= 168;
+        }
+
+        return finalNumber;
+    }
+
+    private static void InitializeTheNumbers()
+    {
+        for (int i = 0; i < 26; i++)
+        {
+            allNumbers[i] = ((char)('A' + i)).ToString();
+        }
+
+        int currentLetterIndex = 26;
+
+        for (int i = 0; i < 26; i++)
+        {
+            for (int j = 0; j < 26; j++)
+            {
+                if (currentLetterIndex == allNumbers.Length)
+                {
+                    break;
+                }
+
+                allNumbers[currentLetterIndex] = ((char)('a' + i)).ToString() + ((char)('A' + j)).ToString();
+                currentLetterIndex++;
             }
         }
-
-        ulong result = (ulong)numbers.Pop();
-        ulong basePower = 168;
-
-        while (numbers.Count > 0)
-        {
-            result += (ulong)numbers.Pop() * basePower;
-            basePower *= 168;
-        }
-
-        Console.WriteLine(result);
     }
 }
