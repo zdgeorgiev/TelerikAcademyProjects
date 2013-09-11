@@ -31,7 +31,11 @@ class Laser
         int nextHeight = laserHeight;
         int nextDepth = laserDepth;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+ 
+>>>>>>> cdd8653caf76bfa1b23bb523e03f1c174d99b1e4
 =======
  
 >>>>>>> cdd8653caf76bfa1b23bb523e03f1c174d99b1e4
@@ -40,7 +44,11 @@ class Laser
             cube[nextWidth, nextHeight, nextDepth] = -1;
             int count = 0;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+ 
+>>>>>>> cdd8653caf76bfa1b23bb523e03f1c174d99b1e4
 =======
  
 >>>>>>> cdd8653caf76bfa1b23bb523e03f1c174d99b1e4
@@ -50,7 +58,11 @@ class Laser
                 count++;
             }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+ 
+>>>>>>> cdd8653caf76bfa1b23bb523e03f1c174d99b1e4
 =======
  
 >>>>>>> cdd8653caf76bfa1b23bb523e03f1c174d99b1e4
@@ -60,7 +72,11 @@ class Laser
                 count++;
             }
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+ 
+>>>>>>> cdd8653caf76bfa1b23bb523e03f1c174d99b1e4
 =======
  
 >>>>>>> cdd8653caf76bfa1b23bb523e03f1c174d99b1e4
@@ -74,7 +90,11 @@ class Laser
             nextHeight += laserDirHeight;
             nextDepth += laserDirDepth;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+ 
+>>>>>>> cdd8653caf76bfa1b23bb523e03f1c174d99b1e4
 =======
  
 >>>>>>> cdd8653caf76bfa1b23bb523e03f1c174d99b1e4
