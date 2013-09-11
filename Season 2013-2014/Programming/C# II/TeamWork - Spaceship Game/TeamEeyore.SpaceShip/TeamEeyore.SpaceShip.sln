@@ -1,0 +1,29 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TeamEeyore.SpaceShip", "TeamEeyore.SpaceShip\TeamEeyore.SpaceShip.csproj", "{58BA4F8D-DC3B-415F-8193-C7EB754CF177}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 2
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://zdgeorgiev.visualstudio.com/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = TeamEeyore.SpaceShip\\TeamEeyore.SpaceShip.csproj
+		SccProjectName1 = TeamEeyore.SpaceShip
+		SccLocalPath1 = TeamEeyore.SpaceShip
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{58BA4F8D-DC3B-415F-8193-C7EB754CF177}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58BA4F8D-DC3B-415F-8193-C7EB754CF177}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58BA4F8D-DC3B-415F-8193-C7EB754CF177}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58BA4F8D-DC3B-415F-8193-C7EB754CF177}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

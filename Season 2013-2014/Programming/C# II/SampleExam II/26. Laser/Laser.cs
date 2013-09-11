@@ -31,39 +31,34 @@ class Laser
         int nextHeight = laserHeight;
         int nextDepth = laserDepth;
 
-        cube[1, 1, 1] = -1;
-        cube[width, height, depth] = -1;
-        cube[1, height, 1] = -1;
-        cube[width, 1, 1] = -1;
-        cube[1, 1, depth] = -1;
-        cube[width, height, 1] = -1;
-        cube[width, 1, depth] = -1;
-        cube[1, height, depth] = -1;
-
         while (true)
         {
-            cube[laserWidth, laserHeight, laserDepth] = -1;
+            cube[nextWidth, nextHeight, nextDepth] = -1;
+            int count = 0;
 
-            if (nextWidth + laserDirWidth > 1 || nextWidth + laserDirWidth > width)
+            if (nextWidth + laserDirWidth < 1 || nextWidth + laserDirWidth > width)
             {
                 ChangeTheDirection(ref laserDirWidth);
+                count++;
             }
 
-            if (nextHeight + laserDirHeight > 1 || nextHeight + laserDirHeight > height)
+            if (nextHeight + laserDirHeight < 1 || nextHeight + laserDirHeight > height)
             {
                 ChangeTheDirection(ref laserDirHeight);
+                count++;
             }
 
-            if (nextDepth + laserDirDepth > 1 || nextDepth + laserDirDepth > depth)
+            if (nextDepth + laserDirDepth < 1 || nextDepth + laserDirDepth > depth)
             {
                 ChangeTheDirection(ref laserDirDepth);
+                count++;
             }
 
             nextWidth += laserDirWidth;
             nextHeight += laserDirHeight;
             nextDepth += laserDirDepth;
 
-            if (cube[nextWidth, nextHeight, nextDepth] == -1)
+            if (cube[nextWidth, nextHeight, nextDepth] == -1 || count == 3)
             {
                 Console.WriteLine("{0} {1} {2}",
                     nextWidth - laserDirWidth, nextHeight - laserDirHeight, nextDepth - laserDirDepth);

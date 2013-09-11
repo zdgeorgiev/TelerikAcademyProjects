@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="TeamEeyore.SpaceShip.Collisions">
+    <Position X="7.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAGAFAAAAAAAABAAAAAAAAAAAQAA=</HashCode>
+      <FileName>Collisions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TeamEeyore.SpaceShip.EnemyShip">
+    <Position X="3" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAAAIAAEAAAAAAAAAAAA=</HashCode>
+      <FileName>EnemyShip.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TeamEeyore.SpaceShip.Engine">
+    <Position X="5.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAACAAACAAAEAICAICAAIAAAAAACAAEAAAAAA=</HashCode>
+      <FileName>Engine.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TeamEeyore.SpaceShip.HelpMenu">
+    <Position X="7.25" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAGAgQAAAAIAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>HelpMenu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TeamEeyore.SpaceShip.MainMenu">
+    <Position X="9.25" Y="0.5" Width="1.5" />
+    <NestedTypes>
+      <Struct Name="TeamEeyore.SpaceShip.MainMenu.Element" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>MainMenu.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Struct>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAIDBiAAAAAAAAAAAAAAAAAAAAIAAAAAAAABqAEBAA=</HashCode>
+      <FileName>MainMenu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TeamEeyore.SpaceShip.PlayerShip">
+    <Position X="7.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAA=</HashCode>
+      <FileName>PlayerShip.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="TeamEeyore.SpaceShip.Ship">
+    <Position X="5.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAIAAIgAAAAEAABAACAEAAAgBAABgAAAAYAA=</HashCode>
+      <FileName>Ship.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="TeamEeyore.SpaceShip.ShotLibrary">
+    <Position X="9.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAACACAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ShotLibrary.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="TeamEeyore.SpaceShip.IMoveble">
+    <Position X="3" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IMoveble.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="TeamEeyore.SpaceShip.Weapon">
+    <Position X="3" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAIIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Weapon.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
