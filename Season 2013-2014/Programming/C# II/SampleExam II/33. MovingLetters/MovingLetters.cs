@@ -6,26 +6,44 @@ class MovingLetters
     static void Main(string[] args)
     {
         string[] inputWords = Console.ReadLine().Split();
-        StringBuilder result = new StringBuilder();
+
+        int bestLenght = 0;
+
+        for (int i = 0; i < inputWords.Length; i++)
+        {
+            int currentLenght = inputWords[i].Length;
+
+            string reversed = string.Empty;
+
+            for (int j = 0; j < inputWords[i].Length; j++)
+            {
+                reversed += inputWords[i][inputWords[i].Length - 1 - j];
+            }
+
+            if (currentLenght > bestLenght)
+            {
+                bestLenght = currentLenght;
+            }
+
+            inputWords[i] = reversed;
+        }
 
         int counter = 0;
+        StringBuilder result = new StringBuilder();
 
         while (true)
         {
             for (int i = 0; i < inputWords.Length; i++)
             {
-                if (inputWords[i] != string.Empty)
+                if (counter < inputWords[i].Length && inputWords[i][counter] != ' ')
                 {
-                    result.Append(inputWords[i][inputWords[i].Length - 1]);
-                    inputWords[i] = inputWords[i].Substring(0, inputWords[i].Length - 1);
-                }
-                else
-                {
-                    counter++;
+                    result.Append(inputWords[i][counter]);
                 }
             }
 
-            if (counter == inputWords.Length)
+            counter++;
+
+            if (counter == bestLenght)
             {
                 break;
             }
