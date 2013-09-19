@@ -69,6 +69,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "33. MovingLetters", "33. Mo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "34. TheyAreGreen", "34. TheyAreGreen\34. TheyAreGreen.csproj", "{050B8E98-9758-4740-865B-540D674D30BE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "35. EncodeAndEncrypt", "35. EncodeAndEncrypt\35. EncodeAndEncrypt.csproj", "{079559AC-B17D-4AB1-9CAA-A591F9BF3A55}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "36. DecodeAndDecrypt", "36. DecodeAndDecrypt\36. DecodeAndDecrypt.csproj", "{A2D65C7A-6AC6-48E8-997D-F68A4F5235BB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -211,6 +215,14 @@ Global
 		{050B8E98-9758-4740-865B-540D674D30BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{050B8E98-9758-4740-865B-540D674D30BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{050B8E98-9758-4740-865B-540D674D30BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{079559AC-B17D-4AB1-9CAA-A591F9BF3A55}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{079559AC-B17D-4AB1-9CAA-A591F9BF3A55}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{079559AC-B17D-4AB1-9CAA-A591F9BF3A55}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{079559AC-B17D-4AB1-9CAA-A591F9BF3A55}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2D65C7A-6AC6-48E8-997D-F68A4F5235BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2D65C7A-6AC6-48E8-997D-F68A4F5235BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2D65C7A-6AC6-48E8-997D-F68A4F5235BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2D65C7A-6AC6-48E8-997D-F68A4F5235BB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
