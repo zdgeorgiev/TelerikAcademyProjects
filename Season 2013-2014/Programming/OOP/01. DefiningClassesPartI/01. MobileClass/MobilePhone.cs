@@ -10,9 +10,15 @@ public class MobilePhone
     private Battery battery;
     private Display display;
 
+    private static readonly MobilePhone iPhone4S =
+        new MobilePhone(PhoneModel.IPhone4S, "Apple", new Display(1, 2));
+
     public readonly List<Call> allCalls;
 
-    public static MobilePhone IPhone4S = new MobilePhone(PhoneModel.IPhone4S, "Apple", new Display(1, 2));
+    public static MobilePhone IPhone4S
+    {
+        get { return iPhone4S; }
+    }
 
     public MobilePhone(PhoneModel model, string manufactorer, Display display)
         : this(model, manufactorer, null, null, display)
