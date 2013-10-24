@@ -15,9 +15,16 @@ namespace Ecosystem
 
         public override void Update(int time)
         {
-            if (this.IsAlive)
+            for (int i = 0; i < time; i++)
             {
-                this.Size++;
+                if (this.IsAlive)
+                {
+                    this.Size++;
+                }
+                else
+                {
+                    break;
+                }
             }
 
             base.Update(time);
