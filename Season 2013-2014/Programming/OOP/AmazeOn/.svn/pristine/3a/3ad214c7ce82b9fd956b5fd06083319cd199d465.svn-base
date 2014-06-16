@@ -1,0 +1,44 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace AmazeOn
+{
+    public class CurrentUser
+    {
+        //Fields.
+        private static User instance;
+
+        //Properties
+        public User Instance
+        {
+            get
+            {
+                return instance;
+            }
+            private set
+            {
+                instance = value;
+            }
+        }
+
+        //Methods
+        public static void SetCurrentUser(string username, string password)
+        {
+            if (instance == null)
+            {
+                instance = new GuestUser();
+            }
+            else
+            {
+                instance = UserFactory.NewCurrentUser(username, password);
+            } 
+        }
+
+        //Constructor.
+        private CurrentUser()
+        {
+        }
+    }
+}

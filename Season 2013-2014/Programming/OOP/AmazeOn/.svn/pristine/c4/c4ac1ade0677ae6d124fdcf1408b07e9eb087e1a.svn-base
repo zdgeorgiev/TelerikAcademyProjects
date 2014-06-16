@@ -1,0 +1,17 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace AmazeOn
+{
+    public class GuestUser : User
+    {
+        private const string GuestUserName = "guest";
+
+        public GuestUser()
+            : base(GuestUserName, GuestUserName)
+        {
+        }
+    }
+}

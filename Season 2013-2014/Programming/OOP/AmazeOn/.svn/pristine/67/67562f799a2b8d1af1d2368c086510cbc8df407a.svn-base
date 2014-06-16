@@ -1,0 +1,147 @@
+﻿using GalaSoft.MvvmLight;
+using GalaSoft.MvvmLight.Command;
+using GalaSoft.MvvmLight.Messaging;
+using AmazeOn.Models;
+using System.Collections.Generic;
+using System;
+
+namespace AmazeOn.Content
+{
+    public class StoreViewModel : ViewModelBase
+    {
+        public List<Item> CurrentItems { get; set; }
+        private int countOfItemsInCart;        
+
+        private int selectedItem;
+        public int SelectedItem 
+        {
+            get
+            {
+                return this.selectedItem;
+            }
+            set
+            {
+                this.selectedItem = value;
+                this.price = this.CurrentItems[this.selectedItem].Price;
+                
+                RaisePropertyChanged("SelectedItem");
+                RaisePropertyChanged("Price");
+                
+            }
+        }
+
+        private double price;
+        public double Price
+        {
+            get
+            {
+                return this.price;
+            }
+            set
+            {
+                this.price = value;
+            }
+        }
+
+        //private string picture;
+        //public string Picture
+        //{
+        //    get
+        //    {
+        //        return string.Format("../../Content/Store/Pics/{0}", this.CurrentItems[this.SelectedItem].Picture);
+        //    }
+        //    set
+        //    {
+        //        this.picture = value;
+        //        RaisePropertyChanged("Picture");
+        //    }
+        //}
+
+        public StoreViewModel()
+        {
+            this.CurrentItems = Store.FillUpStore();
+            //this.CurrentItems = new List<Item>() {
+            //new Laptop(1000,new Manufacturer(),new OperationSystem(),new Promotion(new DateTime(2013,12,1),new DateTime(2013,12,31),800),10,"Model 1","../../Content/Store/Pics/laptop.jpg","Intel i7","nVidia","1920x1280","6 Cell LiIon"),
+            //new Laptop(1000,new Manufacturer(),new OperationSystem(),new Promotion(new DateTime(2013,12,1),new DateTime(2013,12,31),800),10,"Model 2","../../Content/Store/Pics/laptop.jpg","Intel i7","nVidia","1920x1280","6 Cell LiIon"),
+            //new Laptop(1000,new Manufacturer(),new OperationSystem(),new Promotion(new DateTime(2013,12,1),new DateTime(2013,12,31),800),10,"Model 3","../../Content/Store/Pics/laptop.jpg","Intel i7","nVidia","1920x1280","6 Cell LiIon"),
+            //new Laptop(1000,new Manufacturer(),new OperationSystem(),new Promotion(new DateTime(2013,12,1),new DateTime(2013,12,31),800),10,"Model 4","../../Content/Store/Pics/laptop.jpg","Intel i7","nVidia","1920x1280","6 Cell LiIon"),
+            //new Laptop(1000,new Manufacturer(),new OperationSystem(),new Promotion(new DateTime(2013,12,1),new DateTime(2013,12,31),800),10,"Model 5","../../Content/Store/Pics/laptop.jpg","Intel i7","nVidia","1920x1280","6 Cell LiIon"),
+            //new Laptop(1000,new Manufacturer(),new OperationSystem(),new Promotion(new DateTime(2013,12,1),new DateTime(2013,12,31),800),10,"Model 6","../../Content/Store/Pics/laptop.jpg","Intel i7","nVidia","1920x1280","6 Cell LiIon"),
+            //new Laptop(1000,new Manufacturer(),new OperationSystem(),new Promotion(new DateTime(2013,12,1),new DateTime(2013,12,31),800),10,"Model 7","../../Content/Store/Pics/laptop.jpg","Intel i7","nVidia","1920x1280","6 Cell LiIon"),
+            //new Laptop(1000,new Manufacturer(),new OperationSystem(),new Promotion(new DateTime(2013,12,1),new DateTime(2013,12,31),800),10,"Model 8","../../Content/Store/Pics/laptop.jpg","Intel i7","nVidia","1920x1280","6 Cell LiIon"),
+            //new Laptop(1000,new Manufacturer(),new OperationSystem(),new Promotion(new DateTime(2013,12,1),new DateTime(2013,12,31),800),10,"Model 9","../../Content/Store/Pics/laptop.jpg","Intel i7","nVidia","1920x1280","6 Cell LiIon"),
+            //new Laptop(1000,new Manufacturer(),new OperationSystem(),new Promotion(new DateTime(2013,12,1),new DateTime(2013,12,31),800),10,"Model 10","../../Content/Store/Pics/laptop.jpg","Intel i7","nVidia","1920x1280","6 Cell LiIon")
+            //};
+
+            showLaptops = new RelayCommand(() => ShowLaptops());
+            showGSMs = new RelayCommand(() => ShowGSMs());
+            addToCart = new RelayCommand(() => AddToCart());
+            goToCart = new RelayCommand(() => GoToCart());
+            login = new RelayCommand(() => Login());
+            
+        }
+
+        public RelayCommand showLaptops { get; set; }
+        public RelayCommand showGSMs { get; set; }
+        public RelayCommand addToCart { get; set; }
+        public RelayCommand goToCart { get; set; }
+        public RelayCommand login { get; set; }
+
+        public void ShowLaptops()
+        {
+            this.CurrentItems = new List<Item>() {
+            new Laptop(1000,new Manufacturer(),new OperationSystem(),new Promotion(new DateTime(2013,12,1),new DateTime(2013,12,31),800),10,"Model 1","../../Content/Store/Pics/laptop.jpg","Intel i7","nVidia","1920x1280","6 Cell LiIon"),
+            new Laptop(1000,new Manufacturer(),new OperationSystem(),new Promotion(new DateTime(2013,12,1),new DateTime(2013,12,31),800),10,"Model 2","../../Content/Store/Pics/laptop.jpg","Intel i7","nVidia","1920x1280","6 Cell LiIon"),
+            new Laptop(1000,new Manufacturer(),new OperationSystem(),new Promotion(new DateTime(2013,12,1),new DateTime(2013,12,31),800),10,"Model 3","../../Content/Store/Pics/laptop.jpg","Intel i7","nVidia","1920x1280","6 Cell LiIon"),
+            new Laptop(1000,new Manufacturer(),new OperationSystem(),new Promotion(new DateTime(2013,12,1),new DateTime(2013,12,31),800),10,"Model 4","../../Content/Store/Pics/laptop.jpg","Intel i7","nVidia","1920x1280","6 Cell LiIon"),
+            new Laptop(1000,new Manufacturer(),new OperationSystem(),new Promotion(new DateTime(2013,12,1),new DateTime(2013,12,31),800),10,"Model 5","../../Content/Store/Pics/laptop.jpg","Intel i7","nVidia","1920x1280","6 Cell LiIon"),
+            new Laptop(1000,new Manufacturer(),new OperationSystem(),new Promotion(new DateTime(2013,12,1),new DateTime(2013,12,31),800),10,"Model 6","../../Content/Store/Pics/laptop.jpg","Intel i7","nVidia","1920x1280","6 Cell LiIon"),
+            new Laptop(1000,new Manufacturer(),new OperationSystem(),new Promotion(new DateTime(2013,12,1),new DateTime(2013,12,31),800),10,"Model 7","../../Content/Store/Pics/laptop.jpg","Intel i7","nVidia","1920x1280","6 Cell LiIon"),
+            new Laptop(1000,new Manufacturer(),new OperationSystem(),new Promotion(new DateTime(2013,12,1),new DateTime(2013,12,31),800),10,"Model 8","../../Content/Store/Pics/laptop.jpg","Intel i7","nVidia","1920x1280","6 Cell LiIon"),
+            new Laptop(1000,new Manufacturer(),new OperationSystem(),new Promotion(new DateTime(2013,12,1),new DateTime(2013,12,31),800),10,"Model 9","../../Content/Store/Pics/laptop.jpg","Intel i7","nVidia","1920x1280","6 Cell LiIon"),
+            new Laptop(1000,new Manufacturer(),new OperationSystem(),new Promotion(new DateTime(2013,12,1),new DateTime(2013,12,31),800),10,"Model 10","../../Content/Store/Pics/laptop.jpg","Intel i7","nVidia","1920x1280","6 Cell LiIon")
+            };
+            RaisePropertyChanged("CurrentItems");
+        }
+
+        public void ShowGSMs()
+        {
+            this.CurrentItems = new List<Item>() {
+                new GSM(700,Manufacturer.Apple,new OperationSystem(),new Promotion(new DateTime(2013,12,1),new DateTime(2013,12,31),600),20,"iPhone 1","../../Content/Store/Pics/gsm.jpg","A7","600x800","LiIon"),                
+                new GSM(700,Manufacturer.Apple,new OperationSystem(),new Promotion(new DateTime(2013,12,1),new DateTime(2013,12,31),600),20,"iPhone 2","../../Content/Store/Pics/gsm.jpg","A7","600x800","LiIon"),
+                new GSM(700,Manufacturer.Apple,new OperationSystem(),new Promotion(new DateTime(2013,12,1),new DateTime(2013,12,31),600),20,"iPhone 3","../../Content/Store/Pics/gsm.jpg","A7","600x800","LiIon"),
+                new GSM(700,Manufacturer.Apple,new OperationSystem(),new Promotion(new DateTime(2013,12,1),new DateTime(2013,12,31),600),20,"iPhone 4","../../Content/Store/Pics/gsm.jpg","A7","600x800","LiIon"),
+                new GSM(700,Manufacturer.Apple,new OperationSystem(),new Promotion(new DateTime(2013,12,1),new DateTime(2013,12,31),600),20,"iPhone 5","../../Content/Store/Pics/gsm.jpg","A7","600x800","LiIon"),
+                new GSM(700,Manufacturer.Apple,new OperationSystem(),new Promotion(new DateTime(2013,12,1),new DateTime(2013,12,31),600),20,"iPhone 6","../../Content/Store/Pics/gsm.jpg","A7","600x800","LiIon")
+             };
+            RaisePropertyChanged("CurrentItems");
+        }
+
+        public int CountOfItemsInCart
+        {
+            get
+            {                
+                return MainPageViewModel.magazin.cart.ItemsInCart.Count;                
+            }
+        }
+
+        public void AddToCart()
+        {
+            Item itemToAdd = this.CurrentItems[SelectedItem];
+            MainPageViewModel.magazin.cart.AddToCart(itemToAdd);
+            RaisePropertyChanged("CountOfItemsInCart");
+        }
+
+        private void GoToCart()
+        {
+            var msg = new GoToPageMessage() { PageName = "CartView" };
+            Messenger.Default.Send<GoToPageMessage>(msg);
+        }
+
+        private void Login()
+        {
+            var msg = new GoToPageMessage() { PageName = "LoginView" };
+            Messenger.Default.Send<GoToPageMessage>(msg);
+        }
+    }
+}

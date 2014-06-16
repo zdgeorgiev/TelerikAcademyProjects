@@ -1,0 +1,50 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.IO;
+
+namespace AmazeOn
+{
+    class Computer : Item
+    {
+        //Fields.
+
+        //Properties.
+        public string GraphicCard { get; set; }
+
+        //Methods.
+        public override void AddToLog()
+        {
+            StringBuilder result = new StringBuilder();
+            StreamWriter writer = new StreamWriter("../../computers.txt", true);
+
+            using (writer)
+            {
+                writer.WriteLine(this.Model);
+                writer.WriteLine(this.Price);
+                writer.WriteLine(this.Quantity);
+                writer.WriteLine(this.Picture);
+                writer.WriteLine(this.Processor);
+                writer.WriteLine(this.GraphicCard);
+                writer.WriteLine(this.Manufacturer);
+                writer.WriteLine(this.OperationSystem);
+                writer.WriteLine("{0}*{1}*{2}", this.Promotion.DateStart, this.Promotion.DateEnd, this.Promotion.PromoPrice);
+            }
+        }
+
+        public Computer(double price, Manufacturer manufacturer, OperationSystem operationSystem, Promotion promotion, int quantity, string model, 
+            string picture, string processor, string graphicCard)
+        {
+            this.Price = price;
+            this.Manufacturer = manufacturer;
+            this.OperationSystem = operationSystem;
+            this.Promotion = promotion;
+            this.Quantity = quantity;
+            this.Model = model;
+            this.Picture = picture;
+            this.Processor = processor;
+            this.GraphicCard = graphicCard;
+        }
+    }
+}

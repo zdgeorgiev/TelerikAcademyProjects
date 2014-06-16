@@ -1,0 +1,18 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace AmazeOn
+{
+    public class NormalUser : User
+    {
+        //Fields.
+        Cart myCart;
+
+        public NormalUser(string userName, string password)
+            : base(userName, password)
+        {
+        }
+    }
+}

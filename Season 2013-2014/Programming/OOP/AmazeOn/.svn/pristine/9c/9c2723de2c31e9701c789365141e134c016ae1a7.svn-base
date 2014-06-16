@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="AmazeOn.User">
+    <Position X="3" Y="5.75" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACARAAAAAAAAA=</HashCode>
+      <FileName>User.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AmazeOn.GuestUser">
+    <Position X="0.75" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GuestUser.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AmazeOn.NormalUser">
+    <Position X="3" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAgAgAAAAAAAAAAAAAA=</HashCode>
+      <FileName>NormalUser.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AmazeOn.Admin">
+    <Position X="5.25" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAACAAAAAAAAAAgAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Admin.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AmazeOn.Cart" BaseTypeListCollapsed="true">
+    <Position X="10.5" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAIAQAAAAEAAAABAAAAAQAAAAAAAACA=</HashCode>
+      <FileName>Cart.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AmazeOn.Log" Collapsed="true">
+    <Position X="11.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAQAAAAAAAAAAIAAAAAAAAAAAA=</HashCode>
+      <FileName>Log.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AmazeOn.Item">
+    <Position X="2.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAgAgAAAARAAAAAAAAAQAAAAAAAAAAAAAAgAgAAEAAA=</HashCode>
+      <FileName>Item.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="AmazeOn.Computer">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAACAAAAAA=</HashCode>
+      <FileName>Computer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AmazeOn.Laptop">
+    <Position X="2.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAQAQAAAgAAAAAAAAAACAAAAAA=</HashCode>
+      <FileName>Laptop.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AmazeOn.GSM">
+    <Position X="5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAQAQAAAgAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GSM.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AmazeOn.Event">
+    <Position X="9.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Event.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AmazeOn.Depletion">
+    <Position X="8.25" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAARAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Depletion.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="AmazeOn.Order">
+    <Position X="10.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Order.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AmazeOn.CurrentUser">
+    <Position X="1" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAIQAAAAAABAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>CurrentUser.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AmazeOn.UserFactory">
+    <Position X="5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAYAAAAAAAAAAAAABAAAABAEAQAAAAAA=</HashCode>
+      <FileName>UserFactory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AmazeOn.Store">
+    <Position X="8.5" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAAgAIAAAAQAAAAAABAAAAAQAAAAAAAACA=</HashCode>
+      <FileName>Store.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="AmazeOn.IPromotionable" Collapsed="true">
+    <Position X="4.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>IPromotionable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="AmazeOn.ILogable" Collapsed="true">
+    <Position X="6.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ILogable.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="AmazeOn.Manufacturer" Collapsed="true">
+    <Position X="7.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAgAIABAAAAAAAAQACAAAAAAAAIAAAAEAI=</HashCode>
+      <FileName>Manufacturer.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="AmazeOn.OperationSystem" Collapsed="true">
+    <Position X="7.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAEAAAAAAAAIABAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>OperationSystem.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

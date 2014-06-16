@@ -1,0 +1,93 @@
+﻿using System.Windows;
+using AmazeOn.ViewModel;
+using GalaSoft.MvvmLight.Messaging;
+using AmazeOn.Content.LoginAs.View;
+using AmazeOn.Content.Login.View;
+using AmazeOn.Content.Store;
+
+namespace AmazeOn.Content.MainPage.View
+{
+    /// <summary>
+    /// Description for MainPageView.
+    /// </summary>
+    public partial class MainPageView : Window
+    {
+        /// <summary>
+        /// Initializes a new instance of the MainPageView class.
+        /// </summary>
+        public MainPageView()
+        {
+            InitializeComponent();
+            Closing += (s, e) => ViewModelLocator.Cleanup();
+
+            Messenger.Default.Register<GoToPageMessage>
+                (
+                    this,
+                    (action) => ReceiveMessage(action)
+                );
+            this.contentControl1.Content = this.LoginAsView;
+
+        }
+
+        private LoginAsView _LoginAsView;
+        private LoginAsView LoginAsView
+        {
+            get
+            {
+                if (_LoginAsView == null)
+                    _LoginAsView = new LoginAsView();
+                return _LoginAsView;
+            }
+        }
+
+        private LoginView _LoginView;
+        private LoginView LoginView
+        {
+            get
+            {
+                if (_LoginView == null)
+                    _LoginView = new LoginView();
+                return _LoginView;
+            }
+        }
+
+        private StoreView storeView;
+        private StoreView StoreView
+        {
+            get
+            {
+                if (storeView == null)
+                    storeView = new StoreView();
+                return storeView;
+            }
+        }
+
+        private object ReceiveMessage(GoToPageMessage action)
+        {
+            //            this.contentControl1.Content = this.LoginAsView;
+            //this shows what pagename property is!!
+            switch (action.PageName)
+            {
+                case "LoginAsView":
+                    if (this.contentControl1.Content != this.LoginAsView)
+                        this.contentControl1.Content = this.LoginAsView;
+                    break;
+                case "LoginView":
+                    if (this.contentControl1.Content != this.LoginView)
+                        this.contentControl1.Content = this.LoginView;
+                    break;
+                case "StoreView":
+                    if (this.contentControl1.Content != this.StoreView)
+                        this.contentControl1.Content = this.StoreView;
+                    break;
+                default:
+                    break;
+            }
+
+//            string testII = action.PageName.ToString();
+//           System.Windows.MessageBox.Show("You were successful switching to " + testII + ".");
+
+            return null;
+        }
+    }
+}
