@@ -1,0 +1,23 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace AmazeOn.Models
+{
+    public abstract class Item : IPromotionable, ILogable
+    {
+        public double Price { get; set; }
+        public Manufacturer Manufacturer { get; set; }
+        public OperationSystem OperationSystem { get; set; }
+        public Promotion Promotion { get; set; }
+        public int Quantity { get; set; }
+        public string Model { get; set; }
+        public string Picture { get; set; } //String that represents filename. There should be a default picture for Computers, Laptops and GSMs
+        public string Processor { get; set; }
+
+        public virtual void AddToLog(string storageFile)
+        {
+        }
+    }
+}

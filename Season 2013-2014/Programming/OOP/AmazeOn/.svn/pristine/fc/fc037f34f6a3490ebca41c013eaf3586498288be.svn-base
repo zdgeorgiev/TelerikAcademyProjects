@@ -1,0 +1,28 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace AmazeOn
+{
+    class Laptop : Item, IPromotionable
+    {
+        //Fields.
+        private Promotion promotion; //Null by default
+
+        //Properties.
+        public string GraphicCard { get; set; }
+
+        public Promotion Promotion
+        {
+            get
+            {
+                throw new NotImplementedException();
+            }
+            set
+            {
+                throw new NotImplementedException();
+            }
+        }
+    }
+}
