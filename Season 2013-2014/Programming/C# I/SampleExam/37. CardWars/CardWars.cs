@@ -30,14 +30,7 @@ class CardWars
                 }
                 else if (cardInput == "Y")
                 {
-                    if (firstPlayerCurrentPoints - 200 < 0)
-                    {
-                        firstPlayerCurrentPoints = 0;
-                    }
-                    else
-                    {
-                        firstPlayerCurrentPoints -= 200;
-                    }
+                    firstPlayerCurrentPoints -= 200;
                 }
                 else if (cardInput == "X")
                 {
@@ -60,14 +53,7 @@ class CardWars
                 }
                 else if (cardInput == "Y")
                 {
-                    if (secondPlayerCurrentPoints - 200 < 0)
-                    {
-                        secondPlayerCurrentPoints = 0;
-                    }
-                    else
-                    {
-                        secondPlayerCurrentPoints -= 200;
-                    }
+                    secondPlayerCurrentPoints -= 200;
                 }
                 else if (cardInput == "X")
                 {
@@ -80,13 +66,16 @@ class CardWars
                 }
             }
 
-            //if (isFirstPlayerHasX && isSecondPlayerHasX)
-            //{
-            //    firstPlayerTotalPoints += 50;
-            //    secondPlayerTotalPoints += 50;
-            //}
-            //else
-            //{
+            if (isFirstPlayerHasX && isSecondPlayerHasX)
+            {
+                firstPlayerTotalPoints += 50;
+                secondPlayerTotalPoints += 50;
+
+                isFirstPlayerHasX = false;
+                isSecondPlayerHasX = false;
+            }
+            else
+            {
                 if (firstPlayerCurrentPoints > secondPlayerCurrentPoints)
                 {
                     firstPlayerTotalPoints += firstPlayerCurrentPoints;
@@ -97,7 +86,7 @@ class CardWars
                     secondPlayerTotalPoints += secondPlayerCurrentPoints;
                     secondPlayerGamesCounter++;
                 }
-            //}
+            }
         }
 
         if (isFirstPlayerHasX && isSecondPlayerHasX)
