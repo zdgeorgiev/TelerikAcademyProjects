@@ -1,4 +1,4 @@
-persons = [
+const persons = [
     { fn: "Aleksandra", age: 18, gender: true },
     { fn: "Boris", age: 39, gender: true },
     { fn: "Anna", age: 55, gender: true },

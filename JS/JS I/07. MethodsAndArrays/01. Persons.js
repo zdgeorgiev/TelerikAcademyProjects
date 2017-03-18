@@ -8,7 +8,7 @@ function createPerson(fn, ln, age, gender) {
 }
 
 function create10Persons() {
-    arr = [];
+    let arr = [];
     for (let i = 0; i < 10; i++) {
         arr.push(createPerson(i, i, i + 10, true));
     }
