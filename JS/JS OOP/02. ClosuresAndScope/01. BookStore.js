@@ -20,6 +20,8 @@
 			*	Book ISBN is an unique code that contains either 10 or 13 digits
 			*	If something is not valid - throw Error
 */
+"use strict";
+
 function solve() {
     var library = (function () {
         var books = [];

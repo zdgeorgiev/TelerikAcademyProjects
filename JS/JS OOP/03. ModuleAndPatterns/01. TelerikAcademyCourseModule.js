@@ -1,3 +1,5 @@
+"use strict";
+
 const course = (function () {
     let title,
         presentations = [],

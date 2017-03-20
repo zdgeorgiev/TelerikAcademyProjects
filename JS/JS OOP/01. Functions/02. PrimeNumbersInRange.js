@@ -5,6 +5,8 @@
 		2) it must throw an Error if any on the range params is not convertible to `Number`
 		3) it must throw an Error if any of the range params is missing
 */
+"use strict";
+
 function solve(start, end) {
 
     if (typeof start === 'undefined' || Number(start).toString() === `NaN` ||
