@@ -6,6 +6,8 @@
 		throws Error if the parameter is not passed (undefined)
 		throws if any of the elements is Number	
 */
+"use strict";
+
 function solve() {
 
     if (typeof arguments === 'undefined' || typeof arguments[0] !== 'object')
